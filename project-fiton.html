@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitOn — Anie Ajamian</title>
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <span class="nav-mark-wrap"><img src="https://anieajamian.com/wp-content/uploads/2023/08/A-logo.png" alt="Anie Ajamian logo" class="nav-mark"></span>
+      <span>Anie Ajamian</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Work</a>
+<a href="about.html">About</a>
+<a href="resume.html">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<section class="wrap">
+  <a class="back-link" href="index.html">&larr; All Work</a>
+  <div class="hero-eyebrow">Health · iOS (Personal Project)</div>
+  <h1>FitOn</h1>
+  <p class="lede">Customizable Fitness Program</p>
+  <div class="proj-meta">
+      <div><div class="label">Company</div><div class="val">Personal Project</div></div>
+      <div><div class="label">Role</div><div class="val">Product Designer & Researcher</div></div>
+      <div><div class="label">Timeline</div><div class="val">Self-Directed</div></div>
+      <div><div class="label">Team</div><div class="val">—</div></div>
+    </div>
+  <div class="hero-img"><img src="https://anieajamian.com/wp-content/uploads/2024/01/fiton-main-img.png" alt="FitOn"></div>
+  <div class="proj-content">
+    <h2>Overview</h2>
+<div class="proj-body">
+        <p>FitOn offers free, celebrity-led fitness videos and builds a "personalized plan" from a handful of upfront preferences &mdash; but gives users almost no way to adjust that plan once it exists. As a regular user, and a busy parent with limited workout windows, I used this as a self-directed case study in progressive personalization.</p>
+    </div>
+<h2>The Problem</h2>
+<div class="proj-body">
+        <p>Once a plan is generated, there's little users can do to refine it further. Favoriting a workout drops it into a separate section that's disconnected from the plan itself, and as new workouts are uploaded, that favorites list becomes harder to navigate. Users can't delete workouts they don't want or reorder the ones they do.</p>
+    </div>
+<h2>Research</h2>
+<div class="proj-body">
+        <p>I combined personal usage friction with a pass through App Store reviews, which surfaced the same requests repeatedly: delete workouts you don't like, add more of the ones you do, and preview a clip before committing to a full workout.</p>
+        <p>A competitive check against Workout Women (4.8&#9733;, 419K ratings vs. FitOn's 4.9&#9733;, 138K ratings) showed that even a larger competitor hadn't solved deeper plan customization &mdash; a real opportunity to differentiate rather than a solved problem I was re-litigating.</p>
+        <img src="https://anieajamian.com/wp-content/uploads/2023/12/review-2.png" alt="" loading="lazy"><div class="img-caption">App Store review surfacing the customization gap.</div></div>
+<h2>Solution</h2>
+<div class="proj-body">
+        <ul>
+          <li>An "Edit Program" screen with drag-to-reorder and swipe-to-delete for existing plan items</li>
+          <li>An expandable bottom sheet to pull workouts in from Recommended, Favorites, and Trending without leaving the editing flow</li>
+          <li>Preview clips so users can see a workout before adding it</li>
+          <li>A fitness-level filter added alongside existing filters</li>
+        </ul>
+        <img src="https://anieajamian.com/wp-content/uploads/2023/12/Edit-Program-HiFi.png" alt="" loading="lazy"><div class="img-caption">Edit Program screen with preview clips.</div><img src="https://anieajamian.com/wp-content/uploads/2023/12/Edit-Program-Drag-Drop-HiFi.png" alt="" loading="lazy"><div class="img-caption">Drag-and-drop reordering, swipe to delete.</div></div>
+<h2>Rollout Plan</h2>
+<div class="proj-body">
+        <p>I scoped delivery in four phases by build cost and risk, rather than proposing everything at once:</p>
+        <ul>
+          <li><strong>Phase 1 &mdash; Fitness-level filter:</strong> near-zero engineering lift, since FitOn already uses this taxonomy elsewhere in the app</li>
+          <li><strong>Phase 2 &mdash; Edit Program screen:</strong> A/B test against the existing plan-creation flow, 2&ndash;4 weeks to measure engagement and return visits</li>
+          <li><strong>Phase 3 &mdash; Preview clips:</strong> 1&ndash;2 weeks to test once footage exists; reusable across the rest of the app</li>
+          <li><strong>Phase 4 &mdash; Recommendations:</strong> held for last, since FitOn didn't yet track the signals a recommendation engine would need</li>
+        </ul>
+    </div>
+  </div>
+  <div class="project-nav">
+    <a href="project-kalorian.html"><div class="label">&larr; Previous</div>Kalorian</a>
+    <a class="next" href="project-supperclub.html"><div class="label">Next &rarr;</div>Supper Club</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="display">Let's talk.</div>
+      <div class="footer-links">
+        <a href="mailto:hello@anieajamian.com">hello@anieajamian.com</a>
+        <a href="resume.html">Resume</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2026 Anie Ajamian. Los Angeles, CA.</div>
+  </div>
+</footer>
+</body>
+</html>

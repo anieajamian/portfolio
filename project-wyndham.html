@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wyndham Hotels & Resorts — Anie Ajamian</title>
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <span class="nav-mark-wrap"><img src="https://anieajamian.com/wp-content/uploads/2023/08/A-logo.png" alt="Anie Ajamian logo" class="nav-mark"></span>
+      <span>Anie Ajamian</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Work</a>
+<a href="about.html">About</a>
+<a href="resume.html">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<section class="wrap">
+  <a class="back-link" href="index.html">&larr; All Work</a>
+  <div class="hero-eyebrow">Global Hospitality & Loyalty Platform</div>
+  <h1>Wyndham Hotels & Resorts</h1>
+  <p class="lede">Rooms & Rates</p>
+  <div class="proj-meta">
+      <div><div class="label">Company</div><div class="val">Wyndham Hotels & Resorts</div></div>
+      <div><div class="label">Role</div><div class="val">Lead UI/UX Designer</div></div>
+      <div><div class="label">Timeline</div><div class="val">2024 – Present, Contract</div></div>
+      <div><div class="label">Team</div><div class="val">Product, Engineering, Research, Franchise Stakeholders</div></div>
+    </div>
+  <div class="hero-img"><img src="https://anieajamian.com/wp-content/uploads/2026/01/wyndham-main-img-1-scaled.png" alt="Wyndham Hotels & Resorts"></div>
+  <div class="proj-content">
+    <h2>Overview</h2>
+<div class="proj-body">
+        <p>Rooms &amp; Rates is the highest-stakes screen in Wyndham's booking flow &mdash; the moment travelers compare room types and pricing before they commit. As part of a company-wide replatforming effort, I led the redesign of this experience across Wyndham's franchise ecosystem, balancing usability gains against a flow that had punished past redesigns with drops in conversion.</p>
+    </div>
+<h2>The Problem</h2>
+<div class="proj-body">
+        <p>Users struggled to compare rooms because of inconsistent pricing structures, dense content, and unclear hierarchy. Because Wyndham operates as a franchise system, room details and pricing vary widely from property to property &mdash; franchisees own their own content. Previous redesigns had improved usability on paper but hurt conversion, so the organization had grown cautious about touching this flow at all.</p>
+        <p><strong>Objectives:</strong></p>
+        <ul>
+          <li>Improve comparison &mdash; help users evaluate room types and rates side by side</li>
+          <li>Clarify pricing &mdash; build real hierarchy and differentiation between rate types</li>
+          <li>Reduce cognitive load at a high-intent decision point</li>
+          <li>Design for scale across a franchise system with variable content</li>
+        </ul>
+        <img src="https://anieajamian.com/wp-content/uploads/2026/05/Issues-based-on-past-testing-1-scaled.png" alt="" loading="lazy"><div class="img-caption">Issues surfaced from past usability testing.</div></div>
+<h2>Constraints</h2>
+<div class="proj-body">
+        <ul>
+          <li>Franchisees own room and rate content, so descriptions and amenities are inconsistent property to property</li>
+          <li>Some rooms surfaced 5+ rate options &mdash; well past the 3&ndash;4 users could comfortably compare</li>
+          <li>No standardized naming convention for rooms or rates (e.g. redundant "non-smoking" labels on every room in an already non-smoking hotel)</li>
+          <li>Rate types lacked clear differentiation, making perks and inclusions hard to parse</li>
+        </ul>
+    </div>
+<h2>Approach</h2>
+<div class="proj-body">
+        <p>I benchmarked how major hotel and travel platforms handle room and rate selection. Two dominant patterns emerged: single-page comparison models (Marriott, Hilton, Hyatt, IHG) and separated room/rate flows that trade extra navigation for deeper pricing detail (Choice, and OTAs like Expedia and Booking.com). Given the booking flow's sensitivity to conversion, I focused the near-term solution on improving clarity within the existing single-step model, while exploring modal-based rate expansion as a longer-term direction.</p>
+        <img src="https://anieajamian.com/wp-content/uploads/2026/05/Competitor-Examples-scaled.png" alt="" loading="lazy"><div class="img-caption">Competitive benchmarking across major hotel and OTA platforms.</div>
+        <p><strong>Design directions:</strong></p>
+        <ul>
+          <li>Limit the number of visible rate options per room</li>
+          <li>Improve scanability with larger imagery and simpler hierarchy</li>
+          <li>Clarify rate differentiation and the visibility of key interactions</li>
+          <li>Explore modal and layout variations to support scalability without adding steps</li>
+        </ul>
+        <img src="https://anieajamian.com/wp-content/uploads/2026/05/New-Explorations-2-scaled.png" alt="" loading="lazy"><div class="img-caption">Exploring layout directions and updated design-system components.</div></div>
+<h2>Validation</h2>
+<div class="proj-body">
+        <p>After stakeholder alignment, we moved forward with an incremental approach &mdash; refining the existing list-based layout while deferring more experimental patterns for post-launch validation, given the conversion sensitivity of the flow. We then ran usability testing (UserTesting) comparing the updated design against the live production experience across desktop and mobile prototypes.</p>
+        <p>Users responded well to the visual clarity, stronger imagery, and easier navigation. But key gaps remained: comparison still suffered from inconsistent room naming and the need to open individual detail views; vague rate titles made it hard to understand what was included; and a meaningful share of users didn't notice the Price/Points toggle at all.</p>
+        <img src="https://anieajamian.com/wp-content/uploads/2026/04/Price-1-scaled.png" alt="" loading="lazy"><div class="img-caption">Updated desktop design — price view.</div><img src="https://anieajamian.com/wp-content/uploads/2026/04/For-Launch-Mobile-2-scaled.png" alt="" loading="lazy"><div class="img-caption">Final mobile designs shipped at launch.</div></div>
+<h2>Outcome</h2>
+<div class="proj-body">
+        <p class="pull">The safest move wasn't the most ambitious redesign &mdash; it was staging change deliberately in a flow where past ambition had already cost conversion.</p>
+        <p>Given the scale and complexity of a franchise-driven ecosystem, we shipped the most validated, stable version of the experience at launch and staged the rest:</p>
+        <ul>
+          <li><strong>Near-term:</strong> anchor filters and the Price/Points toggle for easier access, concise rate descriptions</li>
+          <li><strong>A/B test candidates:</strong> surfacing room attributes (occupancy, square footage, amenities), richer rate context like cancellation policy</li>
+          <li><strong>Longer-term system work:</strong> standardized room and rate naming across franchise properties, a side-by-side comparison tool</li>
+        </ul>
+        <p>Post-launch metrics are still coming in. Success is defined against maintaining baseline booking performance while improving conversion, decision confidence, and rate-selection efficiency.</p>
+    </div>
+  </div>
+  <div class="project-nav">
+    <a href="project-supperclub.html"><div class="label">&larr; Previous</div>Supper Club</a>
+    <a class="next" href="project-medly.html"><div class="label">Next &rarr;</div>Medly</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="display">Let's talk.</div>
+      <div class="footer-links">
+        <a href="mailto:hello@anieajamian.com">hello@anieajamian.com</a>
+        <a href="resume.html">Resume</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2026 Anie Ajamian. Los Angeles, CA.</div>
+  </div>
+</footer>
+</body>
+</html>
