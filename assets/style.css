@@ -151,7 +151,8 @@ header.site-nav{
 
 /* ---------- Hero ---------- */
 .hero{
-  padding: 96px 0 64px;
+  padding-top: 96px;
+  padding-bottom: 64px;
 }
 .hero-eyebrow{
   font-size: 14px;
@@ -302,7 +303,8 @@ footer.site-footer{
 
 /* ---------- About / general content ---------- */
 .page-hero{
-  padding: 72px 0 24px;
+  padding-top: 72px;
+  padding-bottom: 24px;
 }
 .page-hero .hero-eyebrow{ margin-bottom: 16px; }
 .page-hero h1{ font-size: clamp(32px, 4.4vw, 48px); }
@@ -401,6 +403,19 @@ footer.site-footer{
 @media print{
   header.site-nav, footer.site-footer, .print-note, .hero-actions{ display: none !important; }
   body{ font-size: 12px; }
+}
+
+@media (max-width: 600px){
+  .wrap{ padding: 0 20px; }
+  .nav-inner{
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .nav-logo{ font-size: 19px; }
+  .nav-mark-wrap{ width: 26px; height: 26px; }
+  .nav-links{ gap: 16px; font-size: 12px; }
+  .project-nav{ flex-wrap: wrap; gap: 24px; }
 }
 
 /* ---------- Project page ---------- */
