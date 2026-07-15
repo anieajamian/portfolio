@@ -483,6 +483,23 @@ footer.site-footer{
   margin-bottom: 28px;
 }
 
+.screen-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 8px 0 28px;
+}
+.screen-row .screen-item{
+  flex: 1 1 220px;
+  min-width: 0;
+}
+.screen-row img{
+  margin: 0 0 8px;
+}
+.screen-row .img-caption{
+  margin: 0;
+}
+
 .pull{
   font-family: 'Newsreader', serif;
   font-size: 26px;
