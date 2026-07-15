@@ -499,6 +499,16 @@ footer.site-footer{
 .screen-row .img-caption{
   margin: 0;
 }
+.screen-solo{
+  max-width: 338px;
+  margin: 8px 0 28px;
+}
+.screen-solo img{
+  margin: 0 0 8px;
+}
+.screen-solo .img-caption{
+  margin: 0;
+}
 
 .pull{
   font-family: 'Newsreader', serif;
