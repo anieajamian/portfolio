@@ -93,13 +93,10 @@ header.site-nav{
 }
 .nav-links a{
   color: var(--ink-soft);
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-  transition: border-color .15s ease, color .15s ease;
+  transition: color .15s ease;
 }
 .nav-links a:hover, .nav-links a.active{
   color: var(--accent);
-  border-color: var(--accent);
 }
 
 /* ---------- Hero ---------- */
@@ -319,29 +316,19 @@ footer.site-footer{
   padding-bottom: 12px;
   border-bottom: 1px solid var(--line);
 }
-.job{ margin-bottom: 32px; }
-.job-head{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 6px 20px;
-  margin-bottom: 4px;
-}
-.job-head h3{ font-size: 19px; }
-.job-head .job-meta{
-  font-size: 13px;
-  color: var(--muted);
-  white-space: nowrap;
-}
-.job-role{
-  font-size: 14px;
+.job{ margin-bottom: 36px; }
+.job-line{
+  font-size: 17px;
   font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 10px;
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 16px;
 }
+.job-company{ color: var(--accent); }
+.job-dates{ color: var(--muted); font-weight: 600; }
 .job ul{ margin: 0; padding-left: 20px; color: var(--ink-soft); }
-.job li{ margin-bottom: 7px; font-size: 15.5px; }
+.job li{ margin-bottom: 11px; font-size: 15.5px; line-height: 1.6; }
+.job li:last-child{ margin-bottom: 0; }
 
 .edu-item{ margin-bottom: 14px; font-size: 15.5px; color: var(--ink-soft); }
 .edu-item strong{ color: var(--ink); }
