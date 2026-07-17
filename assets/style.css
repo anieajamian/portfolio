@@ -163,16 +163,23 @@ header.site-nav{
   margin-bottom: 20px;
 }
 .hero h1{
-  font-size: clamp(34px, 5vw, 58px);
+  font-size: clamp(34px, 4.2vw, 54px);
   line-height: 1.08;
-  max-width: 880px;
+}
+.hero-tagline{
+  font-family: 'PP Editorial New', 'Newsreader', Georgia, serif;
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: 20px;
+  color: var(--accent);
+  margin-top: 14px;
 }
 .hero .lede{
   margin-top: 24px;
   font-size: 20px;
   line-height: 1.6;
   color: var(--ink-soft);
-  max-width: 620px;
+  max-width: 560px;
 }
 .hero-actions{
   margin-top: 36px;
@@ -180,6 +187,63 @@ header.site-nav{
   gap: 16px;
   flex-wrap: wrap;
 }
+
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-photo{
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  justify-self: end;
+}
+.hero-photo-panel{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent), #7cc9ff);
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+}
+.hero-photo-img{
+  position: absolute;
+  width: 76%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  top: 13%;
+  left: 20%;
+  border-radius: 62% 38% 41% 59% / 54% 60% 40% 46%;
+  box-shadow: 0 24px 48px -20px rgba(41,40,44,0.35);
+}
+@media (max-width: 860px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .hero-photo{
+    justify-self: center;
+    max-width: 300px;
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+}
+
+/* ---------- Statement ---------- */
+.statement{
+  padding: 56px 0;
+  margin: 16px 0 8px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.statement p{
+  font-family: 'PP Editorial New', 'Newsreader', Georgia, serif;
+  font-size: clamp(26px, 3.6vw, 42px);
+  line-height: 1.35;
+  font-weight: 400;
+  color: var(--ink);
+  max-width: 920px;
+  margin: 0;
+}
+.statement .accent{ color: var(--accent); }
 .btn{
   display: inline-block;
   padding: 13px 26px;
