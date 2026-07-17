@@ -2,7 +2,7 @@
    Anie Ajamian — Portfolio
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petrona:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
 :root{
   --bg: #FFFFFF;
@@ -32,8 +32,7 @@ body{
 }
 
 h1, h2, h3, h4, .display{
-  font-family: 'Fraunces', Georgia, serif;
-  font-optical-sizing: auto;
+  font-family: 'Petrona', Georgia, serif;
   font-weight: 400;
   letter-spacing: -0.01em;
   color: var(--ink);
@@ -70,7 +69,7 @@ header.site-nav{
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Fraunces', serif;
+  font-family: 'Petrona', serif;
   font-weight: 500;
   font-size: 28px;
   line-height: 1;
@@ -293,7 +292,7 @@ footer.site-footer{
 .about-copy p:first-child{
   font-size: 22px;
   color: var(--ink);
-  font-family: 'Fraunces', serif;
+  font-family: 'Petrona', serif;
   font-weight: 400;
   line-height: 1.45;
 }
@@ -487,7 +486,7 @@ footer.site-footer{
 }
 
 .pull{
-  font-family: 'Fraunces', serif;
+  font-family: 'Petrona', serif;
   font-size: 26px;
   line-height: 1.45;
   color: var(--ink);
@@ -505,7 +504,7 @@ footer.site-footer{
 }
 .stat{ min-width: 140px; }
 .stat .num{
-  font-family: 'Fraunces', serif;
+  font-family: 'Petrona', serif;
   font-size: 40px;
   color: var(--accent);
   line-height: 1;
@@ -525,7 +524,7 @@ footer.site-footer{
   padding-top: 40px;
 }
 .project-nav a{
-  font-family: 'Fraunces', serif;
+  font-family: 'Petrona', serif;
   font-size: 22px;
 }
 .project-nav .label{
