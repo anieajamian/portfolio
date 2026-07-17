@@ -419,6 +419,8 @@ footer.site-footer{
     font-family: 'Petrona', Georgia, serif;
     font-size: 20px;
     font-weight: 500;
+    text-transform: none;
+    letter-spacing: normal;
   }
   .btn.nav-cta{ width: auto; min-width: 180px; text-align: center; padding: 12px 18px; font-size: 14px; }
   .project-nav{ flex-wrap: wrap; gap: 24px; }
