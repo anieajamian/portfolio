@@ -2,45 +2,7 @@
    Anie Ajamian — Portfolio
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
-
-/* Headline font: PP Editorial New (licensed from Pangram Pangram).
-   Drop the licensed woff2 files into /assets/fonts/ to activate —
-   Newsreader (a narrow editorial Google-Fonts serif, distinct from
-   the previous Fraunces) is the live fallback until those are added. */
-@font-face{
-  font-family: 'PP Editorial New';
-  src: url('fonts/PPEditorialNew-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face{
-  font-family: 'PP Editorial New';
-  src: url('fonts/PPEditorialNew-Ultralight.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Body font: GT Cinetype (licensed from Grilli Type).
-   Drop the licensed woff2 files into /assets/fonts/ to activate —
-   IBM Plex Sans (a clean, technical Google-Fonts grotesk, distinct
-   from the previous Inter) is the live fallback until those are added. */
-@font-face{
-  font-family: 'GT Cinetype';
-  src: url('fonts/GT-Cinetype-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face{
-  font-family: 'GT Cinetype';
-  src: url('fonts/GT-Cinetype-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
 :root{
   --bg: #FFFFFF;
@@ -63,16 +25,15 @@ body{
   margin: 0;
   background: var(--bg);
   color: var(--ink-soft);
-  font-family: 'GT Cinetype', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, .display{
-  font-family: 'PP Editorial New', 'Newsreader', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-optical-sizing: auto;
-  font-variation-settings: 'opsz' 60;
   font-weight: 400;
   letter-spacing: -0.01em;
   color: var(--ink);
@@ -109,7 +70,7 @@ header.site-nav{
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'PP Editorial New', 'Newsreader', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 500;
   font-size: 28px;
   line-height: 1;
@@ -332,7 +293,7 @@ footer.site-footer{
 .about-copy p:first-child{
   font-size: 22px;
   color: var(--ink);
-  font-family: 'Newsreader', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 400;
   line-height: 1.45;
 }
@@ -468,7 +429,7 @@ footer.site-footer{
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--accent);
-  font-family: 'GT Cinetype', 'IBM Plex Sans', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 700;
   margin: 56px 0 20px;
 }
@@ -526,7 +487,7 @@ footer.site-footer{
 }
 
 .pull{
-  font-family: 'Newsreader', serif;
+  font-family: 'Fraunces', serif;
   font-size: 26px;
   line-height: 1.45;
   color: var(--ink);
@@ -544,7 +505,7 @@ footer.site-footer{
 }
 .stat{ min-width: 140px; }
 .stat .num{
-  font-family: 'Newsreader', serif;
+  font-family: 'Fraunces', serif;
   font-size: 40px;
   color: var(--accent);
   line-height: 1;
@@ -564,7 +525,7 @@ footer.site-footer{
   padding-top: 40px;
 }
 .project-nav a{
-  font-family: 'Newsreader', serif;
+  font-family: 'Fraunces', serif;
   font-size: 22px;
 }
 .project-nav .label{
