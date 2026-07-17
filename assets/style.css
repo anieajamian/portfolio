@@ -373,6 +373,8 @@ footer.site-footer{
 
 @media (max-width: 600px){
   .wrap{ padding: 0 20px; }
+  .hero{ padding-top: 48px; padding-bottom: 40px; }
+  .page-hero{ padding-top: 36px; padding-bottom: 20px; }
   .nav-inner{ padding: 16px 20px; }
   .nav-mark-wrap{ width: 26px; height: 26px; }
   .nav-toggle{
