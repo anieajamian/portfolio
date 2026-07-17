@@ -2,7 +2,7 @@
    Anie Ajamian — Portfolio
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Petrona:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petrona:wght@400;500;600&family=Karla:wght@400;500;600;700&display=swap');
 
 :root{
   --bg: #FFFFFF;
@@ -25,7 +25,7 @@ body{
   margin: 0;
   background: var(--bg);
   color: var(--ink-soft);
-  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Karla', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -58,6 +58,7 @@ header.site-nav{
   border-bottom: 1px solid var(--line);
 }
 .nav-inner{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,14 +104,7 @@ header.site-nav{
 .nav-links a:hover, .nav-links a.active{
   color: var(--accent);
 }
-.nav-cta{
-  padding: 10px 22px;
-  font-size: 13px;
-  background: var(--accent);
-  color: var(--white);
-  border-color: var(--accent);
-}
-.nav-cta:hover{ background: #026bc2; border-color: #026bc2; }
+.nav-toggle{ display: none; }
 
 /* ---------- Hero ---------- */
 .hero{
@@ -158,6 +152,14 @@ header.site-nav{
   border: 1px solid var(--line);
 }
 .btn-ghost:hover{ border-color: var(--ink); }
+.btn.nav-cta{
+  padding: 9px 18px;
+  font-size: 13px;
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
+}
+.btn.nav-cta:hover{ background: #026bc2; border-color: #026bc2; }
 
 /* ---------- Section headings ---------- */
 .section-head{
@@ -317,7 +319,7 @@ footer.site-footer{
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--accent);
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 700;
   margin-bottom: 24px;
   padding-bottom: 12px;
@@ -332,7 +334,13 @@ footer.site-footer{
   gap: 6px 20px;
   margin-bottom: 4px;
 }
-.job-company{ font-size: 19px; color: var(--accent); }
+.job-company{
+  font-family: 'Karla', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: var(--accent);
+}
 .job-meta{
   font-size: 13px;
   color: var(--muted);
@@ -365,15 +373,54 @@ footer.site-footer{
 
 @media (max-width: 600px){
   .wrap{ padding: 0 20px; }
-  .nav-inner{
-    padding: 16px 20px;
-    flex-wrap: wrap;
-    row-gap: 10px;
-  }
+  .nav-inner{ padding: 16px 20px; }
   .nav-mark-wrap{ width: 26px; height: 26px; }
-  .nav-right{ gap: 16px; flex-wrap: wrap; }
-  .nav-links{ gap: 16px; font-size: 12px; }
-  .nav-cta{ padding: 8px 16px; font-size: 12px; }
+  .nav-toggle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .nav-toggle span{
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--ink);
+    transition: transform .2s ease, opacity .2s ease;
+  }
+  .nav-inner.nav-open .nav-toggle span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+  .nav-inner.nav-open .nav-toggle span:nth-child(2){ opacity: 0; }
+  .nav-inner.nav-open .nav-toggle span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+  .nav-right{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    padding: 28px 20px 32px;
+  }
+  .nav-inner.nav-open .nav-right{ display: flex; }
+  .nav-links{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Petrona', Georgia, serif;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .btn.nav-cta{ width: auto; min-width: 180px; text-align: center; padding: 12px 18px; font-size: 14px; }
   .project-nav{ flex-wrap: wrap; gap: 24px; }
 }
 
@@ -427,7 +474,7 @@ footer.site-footer{
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--accent);
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 700;
   margin: 56px 0 20px;
 }
@@ -531,7 +578,7 @@ footer.site-footer{
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 600;
   margin-bottom: 8px;
 }
