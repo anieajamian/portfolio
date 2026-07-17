@@ -468,19 +468,32 @@ footer.site-footer{
   border: 1px solid var(--line);
   margin-bottom: 8px;
 }
-.hero-img img,
-.proj-body img,
-.screen-row img,
-.screen-solo img{
+.img-zoom-wrap{
+  position: relative;
   cursor: zoom-in;
+}
+.img-zoom-wrap img{
   transition: opacity .15s ease;
 }
-.hero-img img:hover,
-.proj-body img:hover,
-.screen-row img:hover,
-.screen-solo img:hover{
+.img-zoom-wrap:hover img{
   opacity: 0.9;
 }
+.zoom-badge{
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20,20,20,0.55);
+  color: var(--white);
+  border-radius: 999px;
+  pointer-events: none;
+  transition: background .15s ease;
+}
+.img-zoom-wrap:hover .zoom-badge{ background: rgba(20,20,20,0.8); }
 
 .proj-content{
   margin-top: 72px;

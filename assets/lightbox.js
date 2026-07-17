@@ -23,7 +23,18 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   triggers.forEach(function(img){
-    img.addEventListener('click', function(){
+    var wrap = document.createElement('div');
+    wrap.className = 'img-zoom-wrap';
+    img.parentNode.insertBefore(wrap, img);
+    wrap.appendChild(img);
+
+    var badge = document.createElement('span');
+    badge.className = 'zoom-badge';
+    badge.setAttribute('aria-hidden', 'true');
+    badge.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+    wrap.appendChild(badge);
+
+    wrap.addEventListener('click', function(){
       open(img.src, img.alt);
     });
   });
