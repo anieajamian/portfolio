@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FitOn — Anie Ajamian</title>
+<title>FitOn | Anie Ajamian</title>
 <link rel="stylesheet" href="assets/style.css?v=2">
 
 </head>
@@ -36,13 +36,13 @@
       <div><div class="label">Company</div><div class="val">Personal Project</div></div>
       <div><div class="label">Role</div><div class="val">Product Designer & Researcher</div></div>
       <div><div class="label">Timeline</div><div class="val">Self-Directed</div></div>
-      <div><div class="label">Team</div><div class="val">—</div></div>
+      <div><div class="label">Team</div><div class="val">N/A</div></div>
     </div>
   <div class="hero-img"><img src="assets/images/fiton-main-img.png" alt="FitOn"></div>
   <div class="proj-content">
     <h2>Overview</h2>
 <div class="proj-body">
-        <p>FitOn offers free, celebrity-led fitness videos and builds a "personalized plan" from a handful of upfront preferences &mdash; but gives users almost no way to adjust that plan once it exists. As a regular user, and a busy parent with limited workout windows, I used this as a self-directed case study in progressive personalization.</p>
+        <p>FitOn offers free, celebrity-led fitness videos and builds a "personalized plan" from a handful of upfront preferences, but gives users almost no way to adjust that plan once it exists. As a regular user, and a busy parent with limited workout windows, I used this as a self-directed case study in progressive personalization.</p>
     </div>
 <h2>The Problem</h2>
 <div class="proj-body">
@@ -51,8 +51,13 @@
 <h2>Research</h2>
 <div class="proj-body">
         <p>I combined personal usage friction with a pass through App Store reviews, which surfaced the same requests repeatedly: delete workouts you don't like, add more of the ones you do, and preview a clip before committing to a full workout.</p>
-        <p>A competitive check against Workout Women (4.8&#9733;, 419K ratings vs. FitOn's 4.9&#9733;, 138K ratings) showed that even a larger competitor hadn't solved deeper plan customization &mdash; a real opportunity to differentiate rather than a solved problem I was re-litigating.</p>
-        <div class="screen-solo"><img src="assets/images/review-2.png" alt="" loading="lazy"><div class="img-caption">App Store review surfacing the customization gap.</div></div></div>
+        <p>A competitive check against Workout Women (4.8&#9733;, 419K ratings vs. FitOn's 4.9&#9733;, 138K ratings) showed that even a larger competitor hadn't solved deeper plan customization, a real opportunity to differentiate rather than a solved problem I was re-litigating.</p>
+        <div class="screen-row">
+          <div class="screen-item"><img src="https://anieajamian.com/wp-content/uploads/2023/12/review-1.png" alt="App Store review" loading="lazy"><div class="img-caption">App Store reviews surfacing the customization gap.</div></div>
+          <div class="screen-item"><img src="assets/images/review-2.png" alt="App Store review" loading="lazy"></div>
+          <div class="screen-item"><img src="https://anieajamian.com/wp-content/uploads/2023/12/review-3.png" alt="App Store review" loading="lazy"></div>
+        </div>
+    </div>
 <h2>Solution</h2>
 <div class="proj-body">
         <ul>
@@ -61,8 +66,21 @@
           <li>Preview clips so users can see a workout before adding it</li>
           <li>A fitness-level filter added alongside existing filters</li>
         </ul>
+        <img src="https://anieajamian.com/wp-content/uploads/2023/12/fiton-new-user-flow.png" alt="New user flow for editing a fitness program" loading="lazy"><div class="img-caption">New user flow for the Edit Program experience.</div>
+        <p><strong>Wireframes:</strong></p>
         <div class="screen-row">
+          <div class="screen-item"><img src="https://anieajamian.com/wp-content/uploads/2023/12/Your-Program.png" alt="Your Program wireframe" loading="lazy"><div class="img-caption">Your Program.</div></div>
+          <div class="screen-item"><img src="https://anieajamian.com/wp-content/uploads/2023/12/Filter-Program.png" alt="Filter Program wireframe" loading="lazy"><div class="img-caption">Filter Program.</div></div>
+          <div class="screen-item"><img src="https://anieajamian.com/wp-content/uploads/2023/12/Edit-Program.png" alt="Edit Program wireframe" loading="lazy"><div class="img-caption">Edit Program.</div></div>
+          <div class="screen-item"><img src="https://anieajamian.com/wp-content/uploads/2023/12/Edit-Program-Bottom-Bar-Expanded.png" alt="Expanded bottom bar wireframe" loading="lazy"><div class="img-caption">Expanded bottom bar.</div></div>
+          <div class="screen-item"><img src="https://anieajamian.com/wp-content/uploads/2023/12/Edit-Program-Drag-Drop.png" alt="Drag and drop wireframe" loading="lazy"><div class="img-caption">Drag &amp; drop.</div></div>
+        </div>
+        <p><strong>High-fidelity final designs:</strong></p>
+        <div class="screen-row">
+          <div class="screen-item"><img src="https://anieajamian.com/wp-content/uploads/2023/12/Your-Program-HiFi.png" alt="Your Program hi-fi" loading="lazy"><div class="img-caption">Your Program, with edit icon added.</div></div>
+          <div class="screen-item"><img src="https://anieajamian.com/wp-content/uploads/2023/12/Filter-Program-HiFi.png" alt="Filter Program hi-fi" loading="lazy"><div class="img-caption">Filter Program, with fitness level added.</div></div>
           <div class="screen-item"><img src="assets/images/Edit-Program-HiFi.png" alt="" loading="lazy"><div class="img-caption">Edit Program screen with preview clips.</div></div>
+          <div class="screen-item"><img src="https://anieajamian.com/wp-content/uploads/2023/12/Edit-Program-Bottom-Bar-Expanded-HiFi.png" alt="Expanded bottom bar hi-fi" loading="lazy"><div class="img-caption">Expanded bottom bar: add from Recommended, Favorites &amp; Trending.</div></div>
           <div class="screen-item"><img src="assets/images/Edit-Program-Drag-Drop-HiFi.png" alt="" loading="lazy"><div class="img-caption">Drag-and-drop reordering, swipe to delete.</div></div>
         </div>
     </div>
@@ -70,10 +88,10 @@
 <div class="proj-body">
         <p>I scoped delivery in four phases by build cost and risk, rather than proposing everything at once:</p>
         <ul>
-          <li><strong>Phase 1 &mdash; Fitness-level filter:</strong> near-zero engineering lift, since FitOn already uses this taxonomy elsewhere in the app</li>
-          <li><strong>Phase 2 &mdash; Edit Program screen:</strong> A/B test against the existing plan-creation flow, 2&ndash;4 weeks to measure engagement and return visits</li>
-          <li><strong>Phase 3 &mdash; Preview clips:</strong> 1&ndash;2 weeks to test once footage exists; reusable across the rest of the app</li>
-          <li><strong>Phase 4 &mdash; Recommendations:</strong> held for last, since FitOn didn't yet track the signals a recommendation engine would need</li>
+          <li><strong>Phase 1 &middot; Fitness-level filter:</strong> near-zero engineering lift, since FitOn already uses this taxonomy elsewhere in the app</li>
+          <li><strong>Phase 2 &middot; Edit Program screen:</strong> A/B test against the existing plan-creation flow, 2&ndash;4 weeks to measure engagement and return visits</li>
+          <li><strong>Phase 3 &middot; Preview clips:</strong> 1&ndash;2 weeks to test once footage exists; reusable across the rest of the app</li>
+          <li><strong>Phase 4 &middot; Recommendations:</strong> held for last, since FitOn didn't yet track the signals a recommendation engine would need</li>
         </ul>
     </div>
   </div>
