@@ -541,7 +541,7 @@ footer.site-footer{
   margin: 8px 0 28px;
 }
 .screen-row .screen-item{
-  flex: 1 1 220px;
+  flex: 0 1 220px;
   min-width: 0;
 }
 .screen-row img{
