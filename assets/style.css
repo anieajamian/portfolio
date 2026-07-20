@@ -535,13 +535,12 @@ footer.site-footer{
 }
 
 .screen-row{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
   margin: 8px 0 28px;
 }
 .screen-row .screen-item{
-  flex: 0 1 220px;
   min-width: 0;
 }
 .screen-row img{
