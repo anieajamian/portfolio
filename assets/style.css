@@ -313,7 +313,7 @@ footer.site-footer{
 }
 
 /* ---------- Resume ---------- */
-.resume-block{ margin-bottom: 52px; }
+.resume-block{ margin-bottom: 52px; max-width: 700px; }
 .resume-block h2{
   font-size: 15px;
   text-transform: uppercase;
