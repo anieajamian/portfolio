@@ -163,12 +163,7 @@ header.site-nav{
 
 /* ---------- Section headings ---------- */
 .section-head{
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
   margin: 88px 0 36px;
-  gap: 24px;
-  flex-wrap: wrap;
 }
 .section-head h2{
   font-size: clamp(24px, 3vw, 32px);
@@ -176,7 +171,8 @@ header.site-nav{
 .section-sub{
   color: var(--muted);
   font-size: 15px;
-  max-width: 420px;
+  max-width: 620px;
+  margin-top: 10px;
 }
 
 /* ---------- Work grid ---------- */
