@@ -355,16 +355,17 @@ footer.site-footer{
 .edu-item{ margin-bottom: 14px; font-size: 15.5px; color: var(--ink-soft); }
 .edu-item strong{ color: var(--ink); }
 
-.print-note{
-  font-size: 13px;
-  color: var(--muted);
-  margin-top: -8px;
-  margin-bottom: 40px;
+.resume-dl{
+  margin-top: 18px;
+  margin-bottom: 8px;
 }
 
 @media print{
-  header.site-nav, footer.site-footer, .print-note{ display: none !important; }
+  header.site-nav, footer.site-footer, .resume-dl{ display: none !important; }
   body{ font-size: 12px; }
+  .wrap{ max-width: none; padding: 0; }
+  .resume-block{ max-width: none; }
+  a{ color: var(--ink) !important; }
 }
 
 @media (max-width: 600px){
