@@ -4,7 +4,7 @@
     {
       "name": "portfolio-static",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8934"],
+      "runtimeArgs": ["-c", "import functools,http.server,socketserver; socketserver.TCPServer.allow_reuse_address=True; h=functools.partial(http.server.SimpleHTTPRequestHandler, directory='/Users/anieajamian/Documents/Claude-Projects/portfolio'); socketserver.TCPServer(('',8934),h).serve_forever()"],
       "port": 8934
     }
   ]
