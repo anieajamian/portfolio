@@ -677,3 +677,71 @@ footer.site-footer{
   .lightbox-close{ top: 16px; right: 16px; width: 38px; height: 38px; font-size: 18px; }
 }
 .project-nav .next{ text-align: right; }
+
+/* ---------- Micro-interactions ---------- */
+
+/* Keyboard focus rings (accessibility) */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav-toggle:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Nav gains a soft elevation once you scroll off the hero */
+header.site-nav{
+  transition: box-shadow .25s ease;
+}
+header.site-nav.is-scrolled{
+  box-shadow: 0 6px 22px -16px rgba(41,40,44,0.35);
+}
+
+/* Underline that grows from the left on nav + footer links */
+.nav-links a,
+.footer-links a{
+  position: relative;
+}
+.nav-links a::after,
+.footer-links a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1.5px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .22s ease;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after,
+.footer-links a:hover::after{
+  transform: scaleX(1);
+}
+
+/* Scroll reveal — the .reveal class is only ever added by JS, and only to
+   elements below the fold, so with no JS (or reduced motion) everything is
+   fully visible and nothing animates on load. */
+.reveal{
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.is-visible{
+  opacity: 1;
+  transform: none;
+}
+
+/* Respect the OS "reduce motion" setting across the whole site */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *, *::before, *::after{
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+  .reveal{ opacity: 1 !important; transform: none !important; }
+}
