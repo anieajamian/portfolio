@@ -190,7 +190,7 @@
 'vec3 CLOUD_WARM=vec3(0.972,0.686,0.565);',
 'vec3 CLOUD_COOL=vec3(0.925,0.706,0.769);',
 'vec3 GLOWCOL=vec3(0.957,0.659,0.525);',
-'float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+'float hash(vec2 p){vec3 p3=fract(vec3(p.xyx)*0.1031);p3+=dot(p3,p3.yzx+33.33);return fract((p3.x+p3.y)*p3.z);}',
 'float noise(vec2 p){vec2 i=floor(p);vec2 f=fract(p);vec2 u=f*f*(3.-2.*f);',
 '  return mix(mix(hash(i),hash(i+vec2(1,0)),u.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),u.x),u.y);}',
 'float fbm(vec2 p){float v=0.,a=0.5;mat2 m=mat2(1.6,1.2,-1.2,1.6);',
