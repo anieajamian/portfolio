@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://anieajamian.com/assets/images/og-image.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=10">
+<link rel="stylesheet" href="assets/style.css?v=11">
 
 </head>
 <body class="home">
@@ -247,7 +247,7 @@
   var start=performance.now(),cm=[0,0],raf;
   function draw(now){var t=(now-start)/1000;cm[0]+=(mx-cm[0])*0.05;cm[1]+=(my-cm[1])*0.05;
     gl.uniform2f(U.uRes,canvas.width,canvas.height);gl.uniform1f(U.uT,reduce?30.0:t);gl.uniform2f(U.uM,cm[0],cm[1]);
-    var eWarm=mob?cur.warm*0.72:cur.warm,eGlow=mob?cur.glow*0.42:cur.glow,eSat=mob?0.88:cur.sat;
+    var eWarm=mob?cur.warm*0.80:cur.warm,eGlow=mob?cur.glow*0.38:cur.glow,eSat=mob?1.10:cur.sat;
     gl.uniform1f(U.uDensity,cur.density);gl.uniform1f(U.uWarm,eWarm);gl.uniform1f(U.uDrift,cur.drift);
     gl.uniform1f(U.uGlow,eGlow);gl.uniform1f(U.uGrain,cur.grain);gl.uniform1f(U.uSat,eSat);
     gl.uniform2f(U.uACenter,aCX+cm[0]*0.012,aCY-cm[1]*0.008);gl.uniform2f(U.uASize,aW,aH);gl.uniform1f(U.uAI,AI);
