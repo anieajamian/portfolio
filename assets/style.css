@@ -864,6 +864,8 @@ body.home header.site-nav:has(.nav-open) .nav-toggle span{ background: var(--ink
 
 @media (max-width: 600px){
   .hero-content{ padding: clamp(88px,14vh,150px) 0 14vh; }
+}
+@media (max-width: 680px), (max-height: 520px){
   .hero-shader .scrim{ background:
     linear-gradient(180deg, rgba(6,13,36,.60) 0%, rgba(6,13,36,.22) 24%, rgba(10,8,30,.12) 50%, rgba(26,10,42,.46) 100%),
     linear-gradient(0deg, rgba(18,11,42,.26), rgba(18,11,42,.26)); }

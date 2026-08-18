@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://anieajamian.com/assets/images/og-image.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=11">
+<link rel="stylesheet" href="assets/style.css?v=12">
 
 </head>
 <body class="home">
@@ -241,7 +241,7 @@
     aCX=1.0-0.06-aW*0.5;aCY=0.5;}
   function resize(){var w=hero.clientWidth,h=hero.clientHeight;
     canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);
-    canvas.style.width=w+'px';canvas.style.height=h+'px';gl.viewport(0,0,canvas.width,canvas.height);mob=w<680;computeA();}
+    canvas.style.width=w+'px';canvas.style.height=h+'px';gl.viewport(0,0,canvas.width,canvas.height);mob=(window.innerWidth<680)||(window.innerHeight<520);computeA();}
   window.addEventListener('resize',resize);resize();canvas.classList.add('ready');
 
   var start=performance.now(),cm=[0,0],raf;
@@ -250,7 +250,7 @@
     var eWarm=mob?cur.warm*0.80:cur.warm,eGlow=mob?cur.glow*0.38:cur.glow,eSat=mob?1.10:cur.sat;
     gl.uniform1f(U.uDensity,cur.density);gl.uniform1f(U.uWarm,eWarm);gl.uniform1f(U.uDrift,cur.drift);
     gl.uniform1f(U.uGlow,eGlow);gl.uniform1f(U.uGrain,cur.grain);gl.uniform1f(U.uSat,eSat);
-    gl.uniform2f(U.uACenter,aCX+cm[0]*0.012,aCY-cm[1]*0.008);gl.uniform2f(U.uASize,aW,aH);gl.uniform1f(U.uAI,AI);
+    gl.uniform2f(U.uACenter,aCX+cm[0]*0.012,aCY-cm[1]*0.008);gl.uniform2f(U.uASize,aW,aH);gl.uniform1f(U.uAI,mob?0.0:AI);
     gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);gl.drawArrays(gl.TRIANGLES,0,3);if(!reduce)raf=requestAnimationFrame(draw);}
   raf=requestAnimationFrame(draw);
   if(reduce)draw(start+30000);
