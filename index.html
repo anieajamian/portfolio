@@ -4,26 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anie Ajamian | Senior / Staff Product Designer, Los Angeles</title>
-<meta name="description" content="Anie Ajamian is a Senior / Staff Product Designer in Los Angeles with 15+ years across startups and global platforms, designing complex, high-stakes product flows from 0 to 1 and at scale.">
+<meta name="description" content="Anie Ajamian is a Senior / Staff Product Designer in Los Angeles with 15+ years across startups and global platforms, designing complex, consequential product flows from 0 to 1 and at scale.">
 <link rel="canonical" href="https://anieajamian.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Anie Ajamian">
 <meta property="og:title" content="Anie Ajamian | Senior / Staff Product Designer, Los Angeles">
-<meta property="og:description" content="Anie Ajamian is a Senior / Staff Product Designer in Los Angeles with 15+ years across startups and global platforms, designing complex, high-stakes product flows from 0 to 1 and at scale.">
+<meta property="og:description" content="Anie Ajamian is a Senior / Staff Product Designer in Los Angeles with 15+ years across startups and global platforms, designing complex, consequential product flows from 0 to 1 and at scale.">
 <meta property="og:url" content="https://anieajamian.com/">
 <meta property="og:image" content="https://anieajamian.com/assets/images/og-image.jpg">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1254">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Anie Ajamian | Senior / Staff Product Designer, Los Angeles">
-<meta name="twitter:description" content="Anie Ajamian is a Senior / Staff Product Designer in Los Angeles with 15+ years across startups and global platforms, designing complex, high-stakes product flows from 0 to 1 and at scale.">
+<meta name="twitter:description" content="Anie Ajamian is a Senior / Staff Product Designer in Los Angeles with 15+ years across startups and global platforms, designing complex, consequential product flows from 0 to 1 and at scale.">
 <meta name="twitter:image" content="https://anieajamian.com/assets/images/og-image.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=6">
+<link rel="stylesheet" href="assets/style.css?v=9">
 
 </head>
-<body>
+<body class="home">
 <header class="site-nav">
   <div class="nav-inner">
     <a class="nav-logo" href="index.html">
@@ -35,7 +35,7 @@
 <a href="about.html">About</a>
 <a href="resume.html">Resume</a>
     </nav>
-    <a class="btn nav-cta" href="mailto:aajamian203@gmail.com">Get in Touch</a>
+    <a class="btn nav-cta" href="mailto:aajamian203@gmail.com">Say hello</a>
     </div>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -43,13 +43,26 @@
   </div>
 </header>
 
-<section class="wrap hero">
-  <h1>Hi, I&rsquo;m Anie &mdash; I design the screens where the stakes are highest and the rules are messiest.</h1>
-  <p class="lede">A product designer with 15+ years across startups and global platforms, building products 0&rarr;1 and sharpening those already at scale. I combine strategy, research, and craft to make complicated, high-friction flows feel clear and effortless.</p>
+<section class="hero-shader" id="hero">
+  <canvas id="gl"></canvas>
+  <svg class="grain" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true"><filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#gr)"/></svg>
+  <div class="scrim"></div>
+
+  <div class="hero-content">
+    <div class="wrap">
+      <h1>Hi, I&rsquo;m Anie &mdash; I design the screens where the stakes are <span class="grad">highest</span> and the rules are <span class="grad">messiest</span>.</h1>
+      <p class="hero-role">Senior / Staff Product Designer based in Los Angeles, CA</p>
+      <p class="lede">15+ years across startups and global platforms, building products 0&rarr;1 and sharpening those already at scale. I combine strategy, research, and craft to make complicated, friction-filled flows feel clear and effortless.</p>
+      <div class="hero-cta">
+        <a class="hero-btn solid" href="#work">See selected work</a>
+      </div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#work" aria-label="Scroll to selected work">Scroll<span class="dash"></span></a>
 </section>
 
-<section class="wrap">
-  <div class="section-head" style="margin-top:40px;">
+<section class="wrap" id="work">
+  <div class="section-head">
     <h2>Selected Work</h2>
     <div class="section-sub">Experience spanning hospitality, healthcare, e-commerce, and two self-directed case studies.</div>
   </div>
@@ -59,7 +72,7 @@
   <div class="body">
     <span class="tag">Global Hospitality & Loyalty Platform</span>
     <h3>Wyndham Hotels & Resorts <span style="color:var(--muted); font-weight:400;">| Rooms & Rates</span></h3>
-    <p>Redesigning the highest-stakes screen in the booking flow across a franchise system where every property owns its own content.</p>
+    <p>Redesigning the pivotal screen in the booking flow across a franchise system where every property owns its own content.</p>
   </div>
 </a><a class="work-card" href="project-medly.html">
   <div class="thumb"><img src="assets/images/medly_on_laptop-scaled.jpg" alt="Medly: Prescription Checkout & Delivery" loading="lazy"></div>
@@ -114,5 +127,133 @@
   </div>
 </footer>
 <script src="assets/nav.js?v=3" defer></script>
+
+<!-- Homepage hero: solidify the nav once scrolled past the shader -->
+<script>
+(function(){
+  var hero=document.getElementById('hero');
+  if(!hero)return;
+  var body=document.body;
+  function upd(){body.classList.toggle('hero-scrolled', window.scrollY > hero.offsetHeight - 90);}
+  upd();
+  window.addEventListener('scroll',upd,{passive:true});
+  window.addEventListener('resize',upd);
+})();
+</script>
+
+<!-- Homepage hero: WebGL sunset-cloud shader with the A monogram woven into the clouds -->
+<script>
+(function(){
+  var hero=document.getElementById('hero'),canvas=document.getElementById('gl');
+  if(!hero||!canvas)return;
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* Golden mood */
+  var cur={density:0.68,warm:1.0,drift:1.05,glow:0.6,sat:0.97,grain:0.02};
+  var AI=0.26; /* A-ghost intensity — "Present" */
+
+  var mx=0,my=0;
+  hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();
+    mx=(e.clientX-r.left)/r.width-.5;my=(e.clientY-r.top)/r.height-.5;});
+
+  var gl=null;try{gl=canvas.getContext('webgl',{alpha:true,premultipliedAlpha:false})||canvas.getContext('experimental-webgl',{alpha:true,premultipliedAlpha:false});}catch(e){}
+  if(!gl){return;}
+
+  /* rasterize the real A monogram to an alpha texture */
+  var aTex=gl.createTexture();
+  (function(){
+    var S=2,W=312,H=306,c=document.createElement('canvas');c.width=W*S;c.height=H*S;
+    var x=c.getContext('2d');x.scale(S,S);
+    var d="M160.93 1.5L161.299 2.46289L272.648 292.536H309.673V304.5H180.168V292.536H225.066L183.105 184.5H96.2861L54.3262 292.536H92.8066V304.5H1.5V292.536H38.1104L148.64 2.46582L149.008 1.5H160.93Z";
+    x.fillStyle="#fff";x.fill(new Path2D(d),"evenodd");
+    gl.bindTexture(gl.TEXTURE_2D,aTex);
+    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);
+    gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,c);
+    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
+  })();
+  var GLYPH_ASPECT=312/306;
+
+  var vsrc='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+  var fsrc=[
+'precision highp float;',
+'uniform vec2 uRes;uniform float uT;uniform vec2 uM;',
+'uniform float uDensity,uWarm,uDrift,uGlow,uGrain,uSat;',
+'uniform sampler2D uA;uniform vec2 uACenter,uASize;uniform float uAI;',
+'vec3 NAVY=vec3(0.043,0.180,0.388);vec3 BLUE=vec3(0.165,0.329,0.627);',
+'vec3 PERI=vec3(0.420,0.475,0.753);vec3 MAUVE=vec3(0.690,0.490,0.690);',
+'vec3 ROSE=vec3(0.945,0.494,0.624);vec3 CORAL=vec3(0.941,0.537,0.431);',
+'vec3 GOLD=vec3(0.949,0.663,0.549);',
+'vec3 CLOUD_SHADOW=vec3(0.482,0.451,0.612);',
+'vec3 CLOUD_WARM=vec3(0.972,0.686,0.565);',
+'vec3 CLOUD_COOL=vec3(0.925,0.706,0.769);',
+'vec3 GLOWCOL=vec3(0.957,0.659,0.525);',
+'float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+'float noise(vec2 p){vec2 i=floor(p);vec2 f=fract(p);vec2 u=f*f*(3.-2.*f);',
+'  return mix(mix(hash(i),hash(i+vec2(1,0)),u.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),u.x),u.y);}',
+'float fbm(vec2 p){float v=0.,a=0.5;mat2 m=mat2(1.6,1.2,-1.2,1.6);',
+'  for(int i=0;i<6;i++){v+=a*noise(p);p=m*p;a*=0.5;}return v;}',
+'void main(){vec2 uv=gl_FragCoord.xy/uRes.xy;',
+'  vec2 p=uv;p.x*=uRes.x/uRes.y;p+=uM*0.05;',
+'  float t=uT*uDrift;',
+'  vec2 uvw=p*vec2(1.7,2.6);',
+'  float base=fbm(uvw+vec2(t*0.08,0.0));',
+'  float det=fbm(uvw*2.05+vec2(t*0.16,1.7));',
+'  float dens=base*0.62+det*0.38;',
+'  float hmask=smoothstep(-0.02,0.34,uv.y);',
+'  float clouds=smoothstep(0.50-uDensity*0.28,0.80,dens)*hmask;',
+'  vec3 litTop=mix(CLOUD_COOL,CLOUD_WARM,uWarm);',
+'  vec3 cloudCol=mix(CLOUD_SHADOW,litTop,smoothstep(0.35,0.9,det));',
+'  vec2 sun=vec2(0.5,0.04);',
+'  float g=exp(-length((uv-sun)*vec2(1.0,2.3))*3.4)*uGlow;',
+'  cloudCol+=GLOWCOL*g*0.5;',
+'  float lum=dot(cloudCol,vec3(0.299,0.587,0.114));cloudCol=mix(vec3(lum),cloudCol,uSat);',
+'  cloudCol+=(hash(gl_FragCoord.xy+t)*2.0-1.0)*uGrain;',
+'  vec2 auv=(uv-uACenter)/uASize+0.5;',
+'  float aMask=0.0;',
+'  if(auv.x>0.0&&auv.x<1.0&&auv.y>0.0&&auv.y<1.0){aMask=texture2D(uA,auv).a;}',
+'  float reveal=smoothstep(0.28,0.82,dens);',
+'  float aI=aMask*uAI*(0.20+0.80*reveal);',
+'  cloudCol=mix(cloudCol,vec3(1.0),aI);',
+'  float a=clamp(max(clouds,aI*0.92),0.0,1.0);',
+'  gl_FragColor=vec4(clamp(cloudCol,0.0,1.0),a);}'
+].join('\n');
+
+  function sh(ty,s){var o=gl.createShader(ty);gl.shaderSource(o,s);gl.compileShader(o);
+    if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)){console.warn(gl.getShaderInfoLog(o));return null;}return o;}
+  var vs=sh(gl.VERTEX_SHADER,vsrc),fs=sh(gl.FRAGMENT_SHADER,fsrc);if(!vs||!fs)return;
+  var prog=gl.createProgram();gl.attachShader(prog,vs);gl.attachShader(prog,fs);gl.linkProgram(prog);
+  if(!gl.getProgramParameter(prog,gl.LINK_STATUS)){console.warn(gl.getProgramInfoLog(prog));return;}
+  gl.useProgram(prog);
+  var buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+  var loc=gl.getAttribLocation(prog,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  var U={};['uRes','uT','uM','uDensity','uWarm','uDrift','uGlow','uGrain','uSat','uA','uACenter','uASize','uAI']
+    .forEach(function(n){U[n]=gl.getUniformLocation(prog,n);});
+  gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,aTex);gl.uniform1i(U.uA,0);
+
+  var dpr=Math.min(window.devicePixelRatio||1,1.75);
+  var aW=0.35,aH=0.62,aCX=0.78,aCY=0.5;
+  function computeA(){var aspect=canvas.width/canvas.height;aH=0.62;aW=aH*GLYPH_ASPECT/aspect;
+    if(aW>0.66){aW=0.66;aH=aW*aspect/GLYPH_ASPECT;} /* keep the A sane on tall/narrow (mobile) screens */
+    aCX=1.0-0.06-aW*0.5;aCY=0.5;}
+  function resize(){var w=hero.clientWidth,h=hero.clientHeight;
+    canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);
+    canvas.style.width=w+'px';canvas.style.height=h+'px';gl.viewport(0,0,canvas.width,canvas.height);computeA();}
+  window.addEventListener('resize',resize);resize();canvas.classList.add('ready');
+
+  var start=performance.now(),cm=[0,0],raf;
+  function draw(now){var t=(now-start)/1000;cm[0]+=(mx-cm[0])*0.05;cm[1]+=(my-cm[1])*0.05;
+    gl.uniform2f(U.uRes,canvas.width,canvas.height);gl.uniform1f(U.uT,reduce?30.0:t);gl.uniform2f(U.uM,cm[0],cm[1]);
+    gl.uniform1f(U.uDensity,cur.density);gl.uniform1f(U.uWarm,cur.warm);gl.uniform1f(U.uDrift,cur.drift);
+    gl.uniform1f(U.uGlow,cur.glow);gl.uniform1f(U.uGrain,cur.grain);gl.uniform1f(U.uSat,cur.sat);
+    gl.uniform2f(U.uACenter,aCX+cm[0]*0.012,aCY-cm[1]*0.008);gl.uniform2f(U.uASize,aW,aH);gl.uniform1f(U.uAI,AI);
+    gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);gl.drawArrays(gl.TRIANGLES,0,3);if(!reduce)raf=requestAnimationFrame(draw);}
+  raf=requestAnimationFrame(draw);
+  if(reduce)draw(start+30000);
+})();
+</script>
 </body>
 </html>
