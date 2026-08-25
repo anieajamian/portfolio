@@ -803,6 +803,13 @@ body.home.hero-scrolled header.site-nav .nav-toggle span{ background: var(--ink)
 body.home header.site-nav:has(.nav-open){ background: rgba(255,255,255,0.96); backdrop-filter: blur(8px); }
 body.home header.site-nav:has(.nav-open) .nav-mark{ filter: none; }
 body.home header.site-nav:has(.nav-open) .nav-toggle span{ background: var(--ink); }
+/* Open menu drops down over a white panel → the links/CTA must switch to the dark treatment (they're white for the hero otherwise) */
+body.home header.site-nav:has(.nav-open) .nav-links a{ color: var(--ink-soft); }
+body.home header.site-nav:has(.nav-open) .nav-links a:hover,
+body.home header.site-nav:has(.nav-open) .nav-links a.active{ color: var(--accent); }
+body.home header.site-nav:has(.nav-open) .btn.nav-cta{
+  background: var(--accent); color: var(--white); border-color: var(--accent);
+}
 
 /* The hero */
 .hero-shader{
