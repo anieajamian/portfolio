@@ -539,11 +539,12 @@ footer.site-footer{
 }
 
 .proj-summary{
-  font-size: 18px;
-  line-height: 1.55;
-  color: var(--ink);
-  border-left: 3px solid var(--accent);
-  padding-left: 20px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0;
   margin: 0 0 44px;
   max-width: 700px;
 }
@@ -557,6 +558,25 @@ footer.site-footer{
   color: var(--accent);
   margin-bottom: 8px;
 }
+
+/* Glanceable metrics promoted to the top of a case study */
+.impact-band{
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 24px 0;
+  margin: 0 0 44px;
+}
+.impact-band > .label{
+  display: block;
+  font-family: 'Karla', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+.impact-band .stat-row{ margin: 0; }
 
 .hero-img{
   border-radius: var(--radius);
