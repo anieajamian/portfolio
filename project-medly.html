@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://anieajamian.com/assets/images/og-card.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=21">
+<link rel="stylesheet" href="assets/style.css?v=22">
 
 </head>
 <body>
@@ -57,7 +57,7 @@
   <div class="impact-band">
     <div class="label">Impact</div>
     <div class="stat-row">
-      <div class="stat"><div class="num">65%</div><div class="label">of patient experience agents' time given back from manual scheduling by full launch</div></div><div class="stat"><div class="num">250/day</div><div class="label">scheduled deliveries company-wide, up from 20&ndash;30/day at first launch</div></div><div class="stat"><div class="num">1,000+</div><div class="label">prescriptions delivered in a single week, at peak</div></div>
+      <div class="stat"><div class="num">65%</div><div class="label">of patient experience agents' time given back from manual scheduling by full launch</div></div><div class="stat"><div class="num">10x</div><div class="label">scheduled deliveries company-wide, from 20&ndash;30/day at first launch to 250+</div></div><div class="stat"><div class="num">1,000+</div><div class="label">prescriptions delivered in a single week, at peak</div></div>
     </div>
   </div>
   <div class="hero-img"><img src="assets/images/medly_on_laptop-scaled.jpg" alt="Medly"></div>
@@ -75,14 +75,23 @@
         </ul>
         <p><strong>Objectives:</strong> let patients self-serve prescription selection and flexible delivery scheduling (with in-store pickup as an option), and free agent time for higher-value patient support.</p>
     </div>
-<h2>Constraints</h2>
+<h2>The decision to delay launch</h2>
 <div class="proj-body">
-        <p>The original plan linked checkout out to a separate, text-based mobile web app. Partway through, engineering discovered the two systems couldn't sync patient data, which would have forced patients to re-enter information they'd already given us. Rather than ship a frustrating handoff, we delayed public launch to build the full checkout experience natively, and phased lower-priority pieces for later.</p>
+        <p>The original plan routed checkout out to a separate, text-based mobile web app. Partway through, engineering discovered the two systems couldn't sync patient data, which would have forced patients to re-enter information they'd already given us in the middle of checkout.</p>
+        <p>That left a choice. We could hit the original date with a launch that had no checkout at all, where patients could update their profile and view their prescriptions but still had to call an agent to order anything. Or we could delay and build the full checkout natively.</p>
+        <p>I pushed for the delay. The whole point of the product was to get scheduling off the phone, and shipping a version that still required a call would have taught patients the app couldn't do the thing they needed it for. We moved the date, built checkout natively, and phased lower-priority pieces to protect the new timeline.</p>
     </div>
 <h2>Approach</h2>
 <div class="proj-body">
         <p>I ran a competitive analysis of pharmacy checkout flows, extended the existing component library rather than building from scratch, and prototyped the flow (<a href="https://www.figma.com/proto/LWenH0NVxxJESmyMOjERVp/MyMedly?page-id=6934%3A31868&amp;node-id=6934-34657&amp;starting-point-node-id=6934%3A34657&amp;mode=design&amp;t=Bq1T3lqJRu3HNt5Q-1" target="_blank" rel="noopener">view the prototype</a>) for moderated usability interviews, recruiting real patients over Google Meet to walk through checking out live prescriptions.</p>
         <div class="img-caption">Early prescriptions-selection concept.</div><img src="assets/images/prescriptions-v1.png" alt="Early concept of Medly&#x27;s prescription-selection screen" loading="lazy"><div class="img-caption">Early checkout concept.</div><img src="assets/images/checkout-filled-v1.png" alt="Early concept of Medly&#x27;s checkout screen with a filled order" loading="lazy"><div class="img-caption">Early bag concept.</div><img src="assets/images/bag-v1.png" alt="Early bag concept" loading="lazy"><div class="img-caption">Early modal explorations.</div><img src="assets/images/modals-v1.png" alt="Early modal explorations" loading="lazy"><div class="img-caption">Early pharmacy-pickup concept.</div><img src="assets/images/pickup-v1.png" alt="Early pharmacy pickup concept" loading="lazy"></div>
+<h2>Holding the line through three PMs</h2>
+<div class="proj-body">
+        <p>The project cycled through three product managers in a year. I was the constant, which meant design ownership expanded into keeping the work coherent across handoffs.</p>
+        <p>When a new PM joined, I walked the backlog with her to reconcile what had been specced against what the product actually needed, and flagged the features that had no tickets at all. We wrote requirements together from there.</p>
+        <p>The team had also never estimated work. I introduced sizing so we could forecast when phases would land, and proposed sizing well-documented front-end tickets asynchronously in Slack to keep it from becoming another meeting. Both stuck.</p>
+        <p>Alongside that, I coordinated with the iOS team so the web checkout and the app stayed aligned.</p>
+    </div>
 <h2>Research Findings</h2>
 <div class="proj-body">
         <p>Patients moved through the flow smoothly overall: <em>&ldquo;Good. Like checking out on Amazon.&rdquo;</em> and <em>&ldquo;Pretty straightforward and easy&rdquo;</em> were typical reactions. But two specific points of friction showed up consistently:</p>
@@ -101,8 +110,8 @@
         <div class="img-caption">Final prescriptions design with add-to-bag control.</div><img src="assets/images/prescriptions-final.png" alt="Final prescriptions design" loading="lazy"><div class="img-caption">Final bag management design.</div><img src="assets/images/bag-final.png" alt="Final Medly bag-management design letting patients add and remove prescriptions" loading="lazy"><div class="img-caption">Final order confirmation design.</div><img src="assets/images/order-confirmation-final.png" alt="Final Medly order-confirmation screen after scheduling a delivery" loading="lazy"></div>
 <h2>Impact</h2>
 <div class="proj-body">
-        <p>Testing also surfaced the post-launch roadmap patients asked for directly: order cancellation and rescheduling, default payment methods, and richer delivery notifications.</p>
         <p>Many patients still preferred walking to their pharmacy in person. The new flow was additive to that relationship, not a replacement for it, and that nuance shaped how we talked about the feature internally.</p>
+        <p>Testing also surfaced the post-launch roadmap patients asked for directly: order cancellation and rescheduling, default payment methods, and richer delivery notifications.</p>
     </div>
   </div>
   <div class="project-nav">
