@@ -227,6 +227,31 @@ header.site-nav{
   font-size: 15px;
   margin: 0;
 }
+.work-card .card-metric{
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+.work-card .card-metric .m-num{
+  font-family: 'Petrona', serif;
+  font-size: 23px;
+  line-height: 1;
+  color: var(--accent);
+  flex: none;
+}
+.work-card .card-metric .m-num .m-x{
+  font-size: 0.72em;
+  position: relative;
+  top: 0.08em;
+}
+.work-card .card-metric .m-label{
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: var(--muted);
+}
 
 /* ---------- Footer ---------- */
 footer.site-footer{
@@ -542,9 +567,8 @@ footer.site-footer{
   font-size: 17px;
   line-height: 1.6;
   color: var(--ink-soft);
-  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  padding: 22px 0;
+  padding: 0 0 22px;
   margin: 0 0 44px;
   max-width: 700px;
 }
@@ -561,9 +585,8 @@ footer.site-footer{
 
 /* Glanceable metrics promoted to the top of a case study */
 .impact-band{
-  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  padding: 24px 0;
+  padding: 0 0 24px;
   margin: 0 0 44px;
 }
 .impact-band > .label{
