@@ -160,6 +160,25 @@ header.site-nav{
   border-color: var(--accent);
 }
 .btn.nav-cta:hover{ background: #026bc2; border-color: #026bc2; }
+.btn.nav-cta .wave{
+  display: inline-block;
+  transform-origin: 70% 80%;
+  will-change: transform;
+}
+.btn.nav-cta:hover .wave{ animation: wave 1.6s ease-in-out infinite; }
+@keyframes wave{
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(14deg); }
+  20%  { transform: rotate(-8deg); }
+  30%  { transform: rotate(14deg); }
+  40%  { transform: rotate(-4deg); }
+  50%  { transform: rotate(10deg); }
+  60%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+@media (prefers-reduced-motion: reduce){
+  .btn.nav-cta:hover .wave{ animation: none; }
+}
 
 /* ---------- Section headings ---------- */
 .section-head{
@@ -399,6 +418,15 @@ footer.site-footer{
   font-weight: 400;
   line-height: 1.45;
 }
+.about-copy h2{
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 40px 0 14px;
+}
+.about-copy h2:first-child{ margin-top: 0; }
 .chip-row{
   display: flex;
   flex-wrap: wrap;
