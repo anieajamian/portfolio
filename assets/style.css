@@ -399,25 +399,6 @@ footer.site-footer{
   font-weight: 400;
   line-height: 1.45;
 }
-.about-belief{
-  margin: 8px 0 24px;
-  padding-top: 48px;
-  border-top: 1px solid var(--line);
-  max-width: 760px;
-}
-.about-belief .hero-eyebrow{ margin-bottom: 14px; }
-.about-belief h2{
-  font-size: clamp(24px, 3vw, 32px);
-  margin: 0 0 26px;
-  max-width: 620px;
-}
-.belief-copy p{
-  font-size: 18px;
-  color: var(--ink-soft);
-  margin: 0 0 22px;
-  max-width: 620px;
-}
-.belief-copy p:last-child{ margin-bottom: 0; }
 
 .chip-row{
   display: flex;
