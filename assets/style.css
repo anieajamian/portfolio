@@ -190,9 +190,8 @@ header.site-nav{
 .section-sub{
   color: var(--muted);
   font-size: 15px;
-  max-width: 660px;
   margin-top: 10px;
-  text-wrap: balance;
+  white-space: nowrap;
 }
 
 /* ---------- Work grid ---------- */
@@ -204,6 +203,7 @@ header.site-nav{
 }
 @media (max-width: 760px){
   .work-grid{ grid-template-columns: 1fr; }
+  .section-sub{ white-space: normal; }
 }
 .work-card{
   display: block;
