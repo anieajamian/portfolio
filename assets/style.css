@@ -247,35 +247,32 @@ header.site-nav{
   font-size: 15px;
   margin: 0;
 }
-.work-card .card-metric{
+.work-card .card-result{
   margin-top: 16px;
   padding-top: 14px;
   border-top: 1px solid var(--line);
-  display: flex;
-  align-items: baseline;
-  gap: 9px;
 }
-.work-card .card-metric .m-num{
-  font-family: 'Petrona', serif;
-  font-size: 23px;
-  line-height: 1;
-  color: var(--accent);
-  flex: none;
+.work-card .card-result .cr-headline{
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin: 0 0 5px;
 }
-.work-card .card-metric .m-num .m-x{
-  font-size: 0.72em;
-  position: relative;
-  top: 0.08em;
+.work-card .card-result .cr-headline strong{
+  font-weight: 500;
+  color: inherit;
+}
+.work-card .card-result .cr-benefit{
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+  margin: 0;
 }
 .stat .num .mx{
   font-size: 0.82em;
   position: relative;
   top: -0.04em;
-}
-.work-card .card-metric .m-label{
-  font-size: 12.5px;
-  line-height: 1.35;
-  color: var(--muted);
 }
 
 /* ---------- Footer ---------- */
