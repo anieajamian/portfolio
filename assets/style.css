@@ -780,9 +780,8 @@ footer.site-footer{
   gap: 32px 44px;
 }
 .impact-band .stat{
-  min-width: 220px;
-  flex: 1 1 240px;
-  max-width: 320px;
+  flex: 1 1 0;
+  min-width: 200px;
 }
 .impact-band .stat .cr-headline{
   font-size: 18px;
@@ -794,14 +793,13 @@ footer.site-footer{
 .impact-band .stat .cr-headline strong{
   font-family: 'Petrona', serif;
   font-weight: 600;
-  color: var(--accent);
+  color: inherit;
 }
 .impact-band .stat .cr-benefit{
   font-size: 13px;
   line-height: 1.45;
   color: var(--muted);
   margin: 0;
-  max-width: 300px;
 }
 
 .project-nav{
