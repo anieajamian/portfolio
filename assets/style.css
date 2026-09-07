@@ -775,6 +775,35 @@ footer.site-footer{
   max-width: 180px;
 }
 
+/* Impact band: whole-stat phrase + benefit subtext (mirrors homepage cards) */
+.impact-band .stat-row{
+  gap: 32px 44px;
+}
+.impact-band .stat{
+  min-width: 220px;
+  flex: 1 1 240px;
+  max-width: 320px;
+}
+.impact-band .stat .cr-headline{
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+.impact-band .stat .cr-headline strong{
+  font-family: 'Petrona', serif;
+  font-weight: 600;
+  color: var(--accent);
+}
+.impact-band .stat .cr-benefit{
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+  margin: 0;
+  max-width: 300px;
+}
+
 .project-nav{
   display: flex;
   justify-content: space-between;
