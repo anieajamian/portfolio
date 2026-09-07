@@ -590,11 +590,11 @@ footer.site-footer{
 .proj-meta{
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 28px 40px;
   margin: 32px 0 44px;
-  padding: 28px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  padding: 26px 30px;
+  background: var(--bg-alt);
+  border-radius: var(--radius);
 }
 .proj-meta div{ min-width: 130px; }
 .proj-meta .label{
@@ -613,8 +613,6 @@ footer.site-footer{
   font-size: 17px;
   line-height: 1.6;
   color: var(--ink-soft);
-  border-bottom: 1px solid var(--line);
-  padding: 0 0 22px;
   margin: 0 0 44px;
   max-width: 700px;
 }
@@ -631,8 +629,6 @@ footer.site-footer{
 
 /* Glanceable metrics promoted to the top of a case study */
 .impact-band{
-  border-bottom: 1px solid var(--line);
-  padding: 0 0 24px;
   margin: 0 0 44px;
 }
 .impact-band > .label{
@@ -773,6 +769,32 @@ footer.site-footer{
   font-size: 14px;
   color: var(--ink-soft);
   max-width: 180px;
+}
+
+/* Impact band: whole-stat phrase + benefit subtext (mirrors homepage cards) */
+.impact-band .stat-row{
+  gap: 32px 44px;
+}
+.impact-band .stat{
+  flex: 1 1 0;
+  min-width: 200px;
+}
+.impact-band .stat .cr-headline{
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+.impact-band .stat .cr-headline strong{
+  font-weight: 600;
+  color: inherit;
+}
+.impact-band .stat .cr-benefit{
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+  margin: 0;
 }
 
 .project-nav{
