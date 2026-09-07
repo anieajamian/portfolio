@@ -590,11 +590,11 @@ footer.site-footer{
 .proj-meta{
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 28px 40px;
   margin: 32px 0 44px;
-  padding: 28px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  padding: 26px 30px;
+  background: var(--bg-alt);
+  border-radius: var(--radius);
 }
 .proj-meta div{ min-width: 130px; }
 .proj-meta .label{
