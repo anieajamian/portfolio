@@ -1063,3 +1063,118 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
   .hero-cta{ flex-direction: column; align-items: stretch; gap: 12px; }
   .hero-btn{ text-align: center; }
 }
+
+/* ============================================================
+   Case-study visual modules (scannable, outline style)
+   Namespaced .cs-* so they never clash with page styles.
+   Blue lives in outlines / icons / text — no tinted fills.
+   ============================================================ */
+
+.cs-ico{ width:22px; height:22px; flex:0 0 auto; stroke:currentColor; fill:none;
+  stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.cs-ico-lg{ width:26px; height:26px; }
+
+/* ---- A · everything ran through a call (funnel) ---- */
+.cs-funnel{ display:flex; align-items:center; gap:28px; margin:8px 0 32px; }
+.cs-funnel-left{ display:flex; flex-direction:column; gap:12px; flex:1; }
+.cs-frow{ display:flex; align-items:center; gap:12px; padding:14px 16px;
+  border:1px solid var(--line); border-radius:var(--radius); background:var(--white);
+  font-size:15px; color:var(--ink); font-weight:500; }
+.cs-frow .cs-ico{ color:var(--muted); }
+.cs-funnel-arrows{ display:flex; align-items:center; justify-content:center; color:var(--line); }
+.cs-arrow-svg{ width:40px; height:14px; stroke:var(--line); fill:none; stroke-width:1.5; }
+.cs-funnel-node{ flex:0 0 auto; width:120px; text-align:center; }
+.cs-phone-badge{ width:76px; height:76px; margin:0 auto 10px; border-radius:50%;
+  background:var(--white); color:var(--accent); border:1.5px solid var(--accent);
+  display:flex; align-items:center; justify-content:center; }
+.cs-phone-badge .cs-ico{ width:32px; height:32px; }
+.cs-funnel-node .cap{ font-size:13px; color:var(--ink); font-weight:600; }
+.cs-funnel-node .sub{ font-size:12px; color:var(--muted); }
+
+/* ---- B · the fork (two-path decision) ---- */
+.cs-fork-lead{ text-align:center; font-family:'Karla',sans-serif; font-size:12px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.07em; color:var(--muted); margin:8px 0 18px; }
+.cs-fork{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:0 0 32px; }
+.cs-path{ position:relative; border:1px solid var(--line); border-radius:var(--radius);
+  padding:22px 22px 24px; background:var(--white); }
+.cs-path.chosen{ border-color:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+.cs-badge{ position:absolute; top:-11px; left:22px; font-family:'Karla',sans-serif; font-size:10px;
+  font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:4px 9px;
+  border-radius:999px; background:var(--white); }
+.cs-path.chosen .cs-badge{ border:1px solid var(--accent); color:var(--accent); }
+.cs-path.rejected .cs-badge{ border:1px solid var(--line); color:var(--muted); }
+.cs-path h4{ font-family:'Karla',sans-serif; font-size:15px; font-weight:700; color:var(--ink);
+  margin:6px 0 14px; }
+.cs-path ul{ margin:0; padding:0; list-style:none; max-width:none; }
+.cs-path li{ display:flex; gap:9px; font-size:13.5px; line-height:1.45; color:var(--ink-soft);
+  margin-bottom:10px; }
+.cs-path li:last-child{ margin-bottom:0; }
+.cs-path .mk{ flex:0 0 auto; margin-top:1px; font-weight:700; }
+.cs-path.rejected .mk{ color:var(--muted); }
+.cs-path.chosen .mk{ color:var(--accent); }
+
+/* ---- C · design was the constant (timeline) ---- */
+.cs-tl{ position:relative; padding:8px 0 0; margin:8px 0 32px; }
+.cs-tl-track{ display:flex; justify-content:space-between; position:relative; margin:0 0 20px; }
+.cs-tl-track::before{ content:""; position:absolute; top:9px; left:6%; right:6%; height:2px; background:var(--line); }
+.cs-tl-node{ position:relative; text-align:center; width:33%; z-index:1; }
+.cs-tl-dot{ width:20px; height:20px; border-radius:50%; background:var(--white);
+  border:2px solid var(--muted); margin:0 auto 12px; }
+.cs-tl-node .pm{ font-family:'Karla',sans-serif; font-weight:700; font-size:14px; color:var(--ink); }
+.cs-tl-node .when{ font-size:12px; color:var(--muted); }
+.cs-tl-constant{ display:flex; align-items:center; gap:14px; margin-top:8px;
+  border:1.5px solid var(--accent); background:var(--white); border-radius:var(--radius); padding:16px 18px; }
+.cs-tl-constant .cs-ico{ color:var(--accent); }
+.cs-tl-constant .who{ font-family:'Karla',sans-serif; font-weight:700; font-size:14px; color:var(--accent); }
+.cs-tl-constant .did{ font-size:13.5px; color:var(--ink-soft); }
+
+/* ---- D · self-serve flow (stepper) ---- */
+.cs-flow{ display:flex; align-items:stretch; gap:0; margin:8px 0 0; }
+.cs-step{ flex:1; text-align:center; padding:0 6px; position:relative; }
+.cs-step .disc{ width:56px; height:56px; border-radius:50%; margin:0 auto 12px;
+  background:var(--white); border:1.5px solid var(--accent); color:var(--accent);
+  display:flex; align-items:center; justify-content:center; }
+.cs-step .st{ font-family:'Karla',sans-serif; font-weight:700; font-size:13.5px; color:var(--ink); line-height:1.3; }
+.cs-step .sd{ font-size:12px; color:var(--muted); margin-top:3px; }
+.cs-step:not(:last-child)::after{ content:""; position:absolute; top:28px; right:-8px;
+  width:16px; height:2px; background:var(--line); }
+.cs-flow-foot{ display:flex; gap:16px; margin:22px 0 32px; }
+.cs-flow-chip{ flex:1; border-radius:var(--radius); padding:12px 14px; font-size:13px; line-height:1.4; }
+.cs-flow-chip.old{ border:1px solid var(--line); color:var(--muted); }
+.cs-flow-chip.new{ border:1.5px solid var(--accent); color:var(--ink); }
+.cs-flow-chip b{ display:block; font-family:'Karla',sans-serif; font-size:10px; text-transform:uppercase;
+  letter-spacing:.07em; margin-bottom:4px; }
+.cs-flow-chip.old b{ color:var(--muted); }
+.cs-flow-chip.new b{ color:var(--accent); }
+
+/* ---- E · what we saw -> what we changed (mapping) ---- */
+.cs-map-row{ display:grid; grid-template-columns:1fr 40px 1fr; align-items:center; gap:0; margin-bottom:16px; }
+.cs-map-row:last-child{ margin-bottom:28px; }
+.cs-map-cell{ border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px;
+  background:var(--white); height:100%; }
+.cs-map-cell .k{ font-family:'Karla',sans-serif; font-size:10px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.07em; margin-bottom:7px; }
+.cs-map-cell.prob .k{ color:var(--muted); }
+.cs-map-cell.fix .k{ color:var(--accent); }
+.cs-map-cell .t{ font-size:14px; line-height:1.45; color:var(--ink-soft); }
+.cs-map-arrow{ text-align:center; }
+.cs-map-arrow svg{ width:22px; height:14px; stroke:var(--accent); fill:none; stroke-width:1.6; }
+.cs-rename{ display:inline-flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:8px; }
+.cs-rename .old{ text-decoration:line-through; color:var(--muted); font-size:13px; }
+.cs-rename .arr{ color:var(--accent); }
+.cs-rename .newp{ font-weight:700; color:var(--accent); font-size:13px; border:1px solid var(--accent);
+  padding:2px 8px; border-radius:4px; }
+
+/* ---- responsive ---- */
+@media (max-width: 600px){
+  .cs-fork{ grid-template-columns:1fr; }
+  .cs-funnel{ flex-direction:column; align-items:stretch; gap:18px; }
+  .cs-funnel-node{ width:auto; }
+  .cs-funnel-arrows{ transform:rotate(90deg); }
+  .cs-flow{ flex-wrap:wrap; gap:20px 0; }
+  .cs-step{ flex:0 0 50%; }
+  .cs-step:not(:last-child)::after{ display:none; }
+  .cs-flow-foot{ flex-direction:column; gap:10px; }
+  .cs-map-row{ grid-template-columns:1fr; gap:8px; }
+  .cs-map-arrow{ transform:rotate(90deg); }
+}
