@@ -205,6 +205,54 @@ header.site-nav{
   .work-grid{ grid-template-columns: 1fr; }
   .section-sub{ white-space: normal; }
 }
+
+/* ---------- Leverage band (How I work) ---------- */
+.lev-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.lev-card{
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 24px 24px 26px;
+}
+.lev-eyebrow{
+  display: inline-block;
+  font-family: 'Karla', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.lev-stmt{
+  font-family: 'Petrona', Georgia, serif;
+  font-size: clamp(18px, 1.9vw, 21px);
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.lev-proof{
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+  max-width: none;
+}
+.lev-proof strong{
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+@media (max-width: 760px){
+  .lev-grid{ grid-template-columns: 1fr; }
+}
+
 .work-card{
   display: block;
   background: var(--white);
