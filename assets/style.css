@@ -1234,6 +1234,35 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 .cs-phase li:last-child{ margin-bottom:0; }
 .cs-phase li .mk{ flex:0 0 auto; color:var(--accent); font-weight:700; margin-top:1px; }
 
+/* ---- breathing room: consistent vertical rhythm around every module ----
+   ~30px above (space from the lead line) and ~44px below (clear gap before
+   the next text/heading/image). Tightly-coupled sub-parts stay close. */
+.cs-funnel,
+.cs-tl,
+.cs-frow-grid,
+.cs-phases,
+.cs-takeaways{ margin:30px 0 44px; }
+
+.cs-fork-lead{ margin:30px 0 18px; }
+.cs-fork{ margin:30px 0 44px; }
+.cs-fork-lead + .cs-fork{ margin-top:0; }
+.cs-fork:has(+ .cs-decision){ margin-bottom:22px; }
+
+.cs-decision{ margin:30px 0 44px; }
+.cs-fork + .cs-decision{ margin-top:0; }
+
+.cs-flow{ margin:30px 0 44px; }
+.cs-flow:has(+ .cs-flow-foot){ margin-bottom:18px; }
+.cs-flow-foot{ margin:0 0 44px; }
+
+.cs-stat-row{ margin:30px 0 44px; }
+.cs-stat-row:has(+ .cs-stat-cap){ margin-bottom:14px; }
+.cs-stat-cap{ margin:0 0 44px; }
+
+.cs-map-row{ margin:30px 0 0; }
+.cs-map-row + .cs-map-row{ margin-top:18px; }
+.cs-map-row:not(:has(+ .cs-map-row)){ margin-bottom:44px; }
+
 /* ---- responsive ---- */
 @media (max-width: 600px){
   .cs-fork{ grid-template-columns:1fr; }
