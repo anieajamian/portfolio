@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://anieajamian.com/assets/images/og-card-v3.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=27">
+<link rel="stylesheet" href="assets/style.css?v=29">
 
 </head>
 <body>
@@ -63,13 +63,25 @@
     </div>
 <h2>Core Flow</h2>
 <div class="proj-body">
-        <ul>
-          <li>Search chefs nearest you, by cuisine, and by date/time availability</li>
-          <li>Specify party size and dietary restrictions</li>
-          <li>Sort results by reviews</li>
-          <li>Split cost with guests</li>
-          <li>Leave a review after the meal</li>
-        </ul>
+        <p>Designed end-to-end, as one journey from finding a chef to reviewing the meal:</p>
+        <div class="cs-flow">
+          <div class="cs-step">
+            <div class="disc"><svg class="cs-ico cs-ico-lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+            <div class="st">Search &amp; filter</div><div class="sd">location, cuisine, date, reviews</div>
+          </div>
+          <div class="cs-step">
+            <div class="disc"><svg class="cs-ico cs-ico-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/></svg></div>
+            <div class="st">Set the details</div><div class="sd">party size, dietary needs</div>
+          </div>
+          <div class="cs-step">
+            <div class="disc"><svg class="cs-ico cs-ico-lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+            <div class="st">Book &amp; split cost</div><div class="sd">share the bill with guests</div>
+          </div>
+          <div class="cs-step">
+            <div class="disc"><svg class="cs-ico cs-ico-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></div>
+            <div class="st">Review the meal</div><div class="sd">rate your chef after</div>
+          </div>
+        </div>
         <div class="screen-row">
           <div class="screen-item"><div class="img-caption">Book a Chef search.</div><img src="assets/images/Book-a-Chef.png" alt="Book a Chef search screen" loading="lazy"></div>
           <div class="screen-item"><div class="img-caption">Chef search results.</div><img src="assets/images/Available-Chef-Results.png" alt="Supper Club chef search-results screen listing available chefs" loading="lazy"></div>
@@ -78,11 +90,29 @@
     </div>
 <h2>MVP Scope</h2>
 <div class="proj-body">
-        <p>I split the MVP into two flows rather than trying to fully build out both sides at once:</p>
-        <ul>
-          <li><strong>Host side:</strong> search for a chef by location, date/time, party size, and cuisine/diet preferences. The first iteration relies on direct messaging with the chef to work out menu details, rather than building a full menu-configuration tool before there's demand to justify it.</li>
-          <li><strong>Chef side:</strong> accept or reject bookings, and message directly with hosts. That messaging thread doubles as a discovery tool: it surfaces which features (menu building, guest-count breakdowns by dietary need) are worth formalizing later.</li>
-        </ul>
+        <p>I split the MVP into two sides rather than trying to fully build out both at once:</p>
+        <div class="cs-fork">
+          <div class="cs-path plain">
+            <span class="cs-badge">Host side</span>
+            <h4><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> Book a chef</h4>
+            <ul>
+              <li><span class="mk">&bull;</span> Search by location, date, party size, cuisine &amp; diet</li>
+              <li><span class="mk">&bull;</span> Message the chef directly to work out the menu</li>
+            </ul>
+          </div>
+          <div class="cs-path plain">
+            <span class="cs-badge">Chef side</span>
+            <h4><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16h14"/><path d="M5 16a7 7 0 0 1 14 0"/><path d="M12 5v4M9 20h6"/></svg> Manage bookings</h4>
+            <ul>
+              <li><span class="mk">&bull;</span> Accept or reject booking requests</li>
+              <li><span class="mk">&bull;</span> Message hosts directly</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cs-decision">
+          <span class="lbl">The MVP bet</span>
+          <p class="txt">Lean on direct messaging first instead of building a full menu-configuration tool. The thread doubles as discovery, surfacing which features (menu building, guest-count breakdowns by dietary need) are worth formalizing later.</p>
+        </div>
         <div class="screen-row">
           <div class="screen-item"><div class="img-caption">Confirm booking details.</div><img src="assets/images/Confirm-Details.png" alt="Supper Club confirm-booking screen summarizing the reservation details" loading="lazy" style="aspect-ratio:9/16;object-fit:cover;object-position:top;"></div>
           <div class="screen-item"><div class="img-caption">Request sent.</div><img src="assets/images/Request-Sent.png" alt="Request sent confirmation" loading="lazy"></div>
