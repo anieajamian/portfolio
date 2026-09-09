@@ -389,6 +389,18 @@ footer.site-footer{
 .page-hero .hero-eyebrow{ margin-bottom: 16px; }
 .page-hero h1{ font-size: clamp(32px, 4.4vw, 48px); }
 
+/* ---------- Case study hero title (unified, homepage-card style) ---------- */
+.case-hero > .hero-eyebrow{ margin-bottom: 14px; }
+.case-hero > h1{
+  font-size: clamp(32px, 4.4vw, 48px);
+  line-height: 1.12;
+  max-width: 900px;
+}
+.case-hero > h1 .h1-sub{
+  color: var(--muted);
+  font-weight: 400;
+}
+
 .about-layout{
   display: grid;
   grid-template-columns: 320px 1fr;
