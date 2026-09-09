@@ -1234,6 +1234,17 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 .cs-phase li:last-child{ margin-bottom:0; }
 .cs-phase li .mk{ flex:0 0 auto; color:var(--accent); font-weight:700; margin-top:1px; }
 
+/* ---- three-up variant of the icon grid (short parallel items) ---- */
+.cs-frow-grid.cols-3{ grid-template-columns:repeat(3,1fr); }
+
+/* ---- accented figure inside a compare card's source line (e.g. a rating) ---- */
+.cs-path .src b{ color:var(--accent); font-weight:700; font-size:15px; }
+
+/* ---- small metadata pill on a takeaway title (e.g. cost/risk tag) ---- */
+.cs-take .tag{ display:inline-block; font-family:'Karla',sans-serif; font-size:10px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.06em; color:var(--muted); border:1px solid var(--line);
+  padding:2px 8px; border-radius:999px; margin-left:8px; vertical-align:middle; }
+
 /* ---- breathing room: consistent vertical rhythm around every module ----
    ~30px above (space from the lead line) and ~44px below (clear gap before
    the next text/heading/image). Tightly-coupled sub-parts stay close. */
@@ -1275,6 +1286,7 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
   .cs-flow-foot{ flex-direction:column; gap:10px; }
   .cs-map-row{ grid-template-columns:1fr; gap:8px; }
   .cs-map-arrow{ transform:rotate(90deg); }
-  .cs-frow-grid{ grid-template-columns:1fr; }
+  .cs-frow-grid,
+  .cs-frow-grid.cols-3{ grid-template-columns:1fr; }
   .cs-phases{ grid-template-columns:1fr; }
 }

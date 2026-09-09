@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://anieajamian.com/assets/images/og-card-v3.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=27">
+<link rel="stylesheet" href="assets/style.css?v=30">
 
 </head>
 <body>
@@ -67,12 +67,33 @@
     </div>
 <h2>Research</h2>
 <div class="proj-body">
-        <p>I combined personal usage friction with a pass through App Store reviews, which surfaced the same requests repeatedly: delete workouts you don't like, add more of the ones you do, and preview a clip before committing to a full workout.</p>
-        <p>A competitive check against Workout Women (4.8&#9733;, 419K ratings vs. FitOn's 4.9&#9733;, 138K ratings) showed that even a larger competitor hadn't solved deeper plan customization &mdash; a real opportunity for FitOn to differentiate.</p>
+        <p>I combined personal usage friction with a pass through App Store reviews, which surfaced the same three requests repeatedly:</p>
+        <div class="cs-frow-grid cols-3">
+          <div class="cs-frow"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg> Delete workouts you don't like</div>
+          <div class="cs-frow"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg> Add more of the ones you do</div>
+          <div class="cs-frow"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3z"/></svg> Preview a clip before committing</div>
+        </div>
         <div class="screen-row">
           <div class="screen-item"><div class="img-caption">App Store reviews surfacing the customization gap.</div><img src="assets/images/review-1.png" alt="App Store review" loading="lazy"></div>
           <div class="screen-item"><img src="assets/images/review-2.png" alt="App Store review" loading="lazy"></div>
           <div class="screen-item"><img src="assets/images/review-3.png" alt="App Store review" loading="lazy"></div>
+        </div>
+        <p class="cs-fork-lead">Deeper plan customization, unsolved by either app</p>
+        <div class="cs-fork">
+          <div class="cs-path plain">
+            <span class="cs-badge">FitOn</span>
+            <h4><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg> FitOn</h4>
+            <p class="src"><b>4.9&#9733;</b> &middot; 138K ratings</p>
+          </div>
+          <div class="cs-path plain">
+            <span class="cs-badge">Competitor</span>
+            <h4><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg> Workout Women</h4>
+            <p class="src"><b>4.8&#9733;</b> &middot; 419K ratings</p>
+          </div>
+        </div>
+        <div class="cs-decision">
+          <span class="lbl">The opportunity</span>
+          <p class="txt">Even the larger competitor hadn't solved deeper plan customization, leaving real room for FitOn to differentiate.</p>
         </div>
     </div>
 <h2>Solution</h2>
@@ -104,12 +125,36 @@
 <h2>Rollout Plan</h2>
 <div class="proj-body">
         <p>I scoped delivery in four phases by build cost and risk, rather than proposing everything at once:</p>
-        <ul>
-          <li><strong>Phase 1 &middot; Fitness-level filter:</strong> near-zero engineering lift, since FitOn already uses this taxonomy elsewhere in the app</li>
-          <li><strong>Phase 2 &middot; Edit Program screen:</strong> A/B test against the existing plan-creation flow, 2&ndash;4 weeks to measure engagement and return visits</li>
-          <li><strong>Phase 3 &middot; Preview clips:</strong> 1&ndash;2 weeks to test once footage exists; reusable across the rest of the app</li>
-          <li><strong>Phase 4 &middot; Recommendations:</strong> held for last, since FitOn didn't yet track the signals a recommendation engine would need</li>
-        </ul>
+        <div class="cs-takeaways">
+          <div class="cs-take">
+            <div class="n">01</div>
+            <div>
+              <div class="tt">Fitness-level filter <span class="tag">near-zero lift</span></div>
+              <p class="dd">FitOn already uses this taxonomy elsewhere in the app, so it ships first.</p>
+            </div>
+          </div>
+          <div class="cs-take">
+            <div class="n">02</div>
+            <div>
+              <div class="tt">Edit Program screen <span class="tag">A/B test</span></div>
+              <p class="dd">Test against the existing plan-creation flow, 2&ndash;4 weeks to measure engagement and return visits.</p>
+            </div>
+          </div>
+          <div class="cs-take">
+            <div class="n">03</div>
+            <div>
+              <div class="tt">Preview clips <span class="tag">1&ndash;2 weeks</span></div>
+              <p class="dd">Quick to test once footage exists, and reusable across the rest of the app.</p>
+            </div>
+          </div>
+          <div class="cs-take">
+            <div class="n">04</div>
+            <div>
+              <div class="tt">Recommendations <span class="tag">held for last</span></div>
+              <p class="dd">FitOn didn't yet track the signals a recommendation engine would need, so it waits.</p>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
   <div class="project-nav">
