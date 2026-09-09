@@ -399,7 +399,6 @@ footer.site-footer{
 .case-hero > h1 .h1-sub{
   color: var(--muted);
   font-weight: 400;
-  font-size: 0.6em;
 }
 
 .about-layout{
@@ -1206,6 +1205,35 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 .cs-take .dd{ font-size:14px; line-height:1.5; color:var(--ink-soft); margin:0; max-width:none; }
 .cs-take .cs-rename{ margin-top:11px; }
 
+/* ---- constraint grid: icon rows in two columns (reuses .cs-frow) ---- */
+.cs-frow-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:8px 0 0; }
+.cs-frow-grid .cs-frow{ align-items:flex-start; font-size:14px; font-weight:400;
+  color:var(--ink-soft); line-height:1.45; }
+.cs-frow-grid .cs-frow .cs-ico{ color:var(--accent); margin-top:1px; }
+
+/* ---- source line + tighter heading for compare cards (reuses .cs-path) ---- */
+.cs-path .src{ font-size:12px; color:var(--muted); margin:0 0 12px; }
+.cs-path h4:has(+ .src){ margin-bottom:5px; }
+
+/* ---- decision callout: accent label above, no box, no bar ---- */
+.cs-decision{ margin:20px 0 0; }
+.cs-decision .lbl{ display:block; font-family:'Karla',sans-serif; font-size:11px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.08em; color:var(--accent); margin-bottom:6px; }
+.cs-decision .txt{ font-size:14px; line-height:1.5; color:var(--ink-soft); margin:0; max-width:none; }
+
+/* ---- staged roadmap: now / next / later phase cards ---- */
+.cs-phases{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:8px 0 0; }
+.cs-phase{ border:1px solid var(--line); border-radius:var(--radius); padding:18px 18px 20px; background:var(--white); }
+.cs-phase.now{ border-color:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+.cs-phase .ph{ display:inline-block; font-family:'Karla',sans-serif; font-size:10px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.07em; color:var(--muted); border:1px solid var(--line);
+  padding:3px 8px; border-radius:999px; margin-bottom:12px; }
+.cs-phase.now .ph{ color:var(--accent); border-color:var(--accent); }
+.cs-phase ul{ margin:0; padding:0; list-style:none; }
+.cs-phase li{ display:flex; gap:8px; font-size:13px; line-height:1.45; color:var(--ink-soft); margin-bottom:10px; }
+.cs-phase li:last-child{ margin-bottom:0; }
+.cs-phase li .mk{ flex:0 0 auto; color:var(--accent); font-weight:700; margin-top:1px; }
+
 /* ---- responsive ---- */
 @media (max-width: 600px){
   .cs-fork{ grid-template-columns:1fr; }
@@ -1218,4 +1246,6 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
   .cs-flow-foot{ flex-direction:column; gap:10px; }
   .cs-map-row{ grid-template-columns:1fr; gap:8px; }
   .cs-map-arrow{ transform:rotate(90deg); }
+  .cs-frow-grid{ grid-template-columns:1fr; }
+  .cs-phases{ grid-template-columns:1fr; }
 }
