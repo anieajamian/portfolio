@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://anieajamian.com/assets/images/og-card-v3.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=27">
+<link rel="stylesheet" href="assets/style.css?v=28">
 
 </head>
 <body>
@@ -69,17 +69,69 @@
     </div>
 <h2>The Problem</h2>
 <div class="proj-body">
-        <p>Most users checked email, skimmed a few homepage stories, and left. The content verticals that carried the ad revenue were effectively hidden: subcategories only appeared after a user clicked into a vertical and waited for a full page reload. Someone had to click "Sports" and reload before they ever saw NFL or NBA.</p>
+        <p>Most users checked email, skimmed a few homepage stories, and left — and the content verticals that carried the ad revenue were effectively hidden behind a click and a page reload:</p>
+        <div class="cs-map-row">
+          <div class="cs-map-cell prob">
+            <div class="k">Before</div>
+            <div class="t">To reach a subcategory like NFL or NBA, a user had to click into &ldquo;Sports&rdquo; and wait for a <em>full page reload</em> before anything appeared.</div>
+          </div>
+          <div class="cs-map-arrow"><svg viewBox="0 0 22 14" aria-hidden="true"><path d="M0 7h16m0 0-5-5m5 5-5 5"/></svg></div>
+          <div class="cs-map-cell fix">
+            <div class="k">After</div>
+            <div class="t">A horizontal nav surfaced the verticals — and previews of their stories — <strong>inline</strong>. No extra click, no reload.</div>
+          </div>
+        </div>
         <div class="img-caption">Original vertical navigation, subcategories hidden behind a reload.</div><img src="assets/images/Original-Nav.png" alt="Original AT&amp;T vertical navigation" loading="lazy">
     </div>
 <h2>Two products in parallel</h2>
 <div class="proj-body">
-        <p>This wasn't the only AT&amp;T surface on my plate. I ran the portal navigation redesign at the same time as <strong>AT&amp;T Live</strong>, a native Android app combining att.net email with news and video. Two products, two codebases, overlapping stakeholders, concurrent timelines. Holding both meant keeping patterns consistent where it helped users and deliberately diverging where the platforms demanded it, while staying legible to two engineering teams at once.</p>
+        <p>The portal redesign wasn't the only AT&amp;T surface on my plate. I ran it at the same time as a second product — two codebases, overlapping stakeholders, concurrent timelines:</p>
+        <div class="cs-fork">
+          <div class="cs-path plain">
+            <span class="cs-badge">Desktop &middot; Web</span>
+            <h4><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg> att.net portal nav</h4>
+            <ul>
+              <li><span class="mk">&bull;</span> 45M+ user news portal</li>
+              <li><span class="mk">&bull;</span> The desktop nav redesign I led</li>
+            </ul>
+          </div>
+          <div class="cs-path plain">
+            <span class="cs-badge">Native &middot; Android</span>
+            <h4><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg> AT&amp;T Live</h4>
+            <ul>
+              <li><span class="mk">&bull;</span> att.net email + news + video</li>
+              <li><span class="mk">&bull;</span> Native companion app, built in parallel</li>
+            </ul>
+          </div>
+        </div>
+        <p class="cs-parallel-note">Holding both meant keeping patterns consistent where it helped users and deliberately diverging where the platforms demanded it — while staying legible to two engineering teams at once.</p>
         <div class="img-caption">AT&amp;T Live, the companion Android app built alongside the portal redesign.</div><img src="assets/images/samsung-blue.jpg" alt="AT&amp;T Live Android app" loading="lazy">
     </div>
 <h2>Research &amp; Approach</h2>
 <div class="proj-body">
-        <p>Performance metrics, stakeholder interviews, AT&amp;T user surveys, and competitive analysis all pointed the same direction: nearly every major news site used horizontal navigation. The pattern had also already proven itself inside AT&amp;T's own ecosystem. On mobile, a horizontal nav had lifted vertical page views 41% and article page views 13%, and that precedent built the business case for bringing it to desktop.</p>
+        <p>Four separate inputs all pointed the same direction — horizontal navigation:</p>
+        <div class="cs-funnel">
+          <div class="cs-funnel-left">
+            <div class="cs-frow"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 3-4 3 2 4-6"/></svg> Performance metrics</div>
+            <div class="cs-frow"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg> Stakeholder interviews</div>
+            <div class="cs-frow"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3V2h6v1M9 9h6M9 13h4"/></svg> AT&amp;T user surveys</div>
+            <div class="cs-frow"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg> Competitive analysis</div>
+          </div>
+          <div class="cs-funnel-arrows">
+            <svg class="cs-arrow-svg" viewBox="0 0 40 14" aria-hidden="true"><path d="M0 7h34m0 0-6-5m6 5-6 5"/></svg>
+          </div>
+          <div class="cs-funnel-node">
+            <div class="cs-phone-badge"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></div>
+            <div class="cap">Go horizontal</div>
+            <div class="sub">one clear direction</div>
+          </div>
+        </div>
+        <p>Nearly every major news site used the pattern, and it had already proven itself inside AT&amp;T's own ecosystem. On mobile, a horizontal nav had lifted:</p>
+        <div class="cs-stat-row">
+          <div class="cs-stat"><div class="num">+41%</div><div class="lbl">vertical page views</div></div>
+          <div class="cs-stat"><div class="num">+13%</div><div class="lbl">article page views</div></div>
+        </div>
+        <p class="cs-stat-cap">The mobile precedent that built the business case for bringing horizontal nav to desktop.</p>
         <p>I researched navigation best practices (7&ndash;9 top-level items is the comfortable ceiling) and worked with AT&amp;T to consolidate a sprawl of links into a dropdown, keeping the focus on the core content verticals.</p>
         <div class="img-caption">Header and nav exploration.</div><img src="assets/images/Black-Header-Nav-Items-v3.png" alt="AT&amp;T header and nav exploration" loading="lazy"><div class="img-caption">Expanded nav exploration.</div><img src="assets/images/Black-Header-Nav-v5-Expanded.png" alt="Expanded nav exploration" loading="lazy">
     </div>
@@ -90,8 +142,29 @@
     </div>
 <h2>A/B testing</h2>
 <div class="proj-body">
-        <p>We ran the redesign as live experiments through Adobe Test &amp; Target against 10% of users, and the first round taught us something uncomfortable: people weren't hovering enough to ever discover the content cards.</p>
-        <p>Round two tested the affordances directly: tab-like nav items, uppercase versus title case, and added directional arrows to signal the dropdowns existed. The arrows and uppercase treatment increased clicks into the dropdown by <strong>25%</strong>.</p>
+        <p>We ran the redesign as live experiments through Adobe Test &amp; Target against 10% of users. It took two rounds — and the first round picked apart an assumption:</p>
+        <div class="cs-map-row">
+          <div class="cs-map-cell prob">
+            <div class="k">Round 1 &middot; tested</div>
+            <div class="t">Editor-curated content cards, revealed on hover inside each dropdown.</div>
+          </div>
+          <div class="cs-map-arrow"><svg viewBox="0 0 22 14" aria-hidden="true"><path d="M0 7h16m0 0-5-5m5 5-5 5"/></svg></div>
+          <div class="cs-map-cell fix">
+            <div class="k">What we learned</div>
+            <div class="t">People weren't hovering enough to ever discover the cards.</div>
+          </div>
+        </div>
+        <div class="cs-map-row">
+          <div class="cs-map-cell prob">
+            <div class="k">Round 2 &middot; tested</div>
+            <div class="t">Tab-like nav items, uppercase vs. title case, and directional arrows to signal the dropdowns exist.</div>
+          </div>
+          <div class="cs-map-arrow"><svg viewBox="0 0 22 14" aria-hidden="true"><path d="M0 7h16m0 0-5-5m5 5-5 5"/></svg></div>
+          <div class="cs-map-cell fix">
+            <div class="k">Result</div>
+            <div class="t">Arrows + uppercase lifted clicks into the dropdown <strong>+25%</strong>.</div>
+          </div>
+        </div>
         <div class="screen-row">
           <div class="screen-item"><div class="img-caption">Round 2: title case.</div><img src="assets/images/Title-Case-4.png" alt="A/B test, title case" loading="lazy"></div>
           <div class="screen-item"><div class="img-caption">Round 2: uppercase with arrows.</div><img src="assets/images/HNav-Arrows-v1.png" alt="A/B test, uppercase with arrows" loading="lazy"></div>
