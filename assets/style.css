@@ -408,12 +408,15 @@ footer.site-footer{
   margin: 48px 0 40px;
   align-items: start;
 }
+.about-photo img{
+  border: 6px solid #fff;
+  border-radius: 2px;
+  transform: rotate(-3deg);
+  box-shadow: 0 16px 34px -16px rgba(41,40,44,0.45);
+}
 @media (max-width: 800px){
   .about-layout{ grid-template-columns: 1fr; }
-}
-.about-photo img{
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
+  .about-photo img{ transform: none; }
 }
 .about-copy p{
   font-size: 18px;
