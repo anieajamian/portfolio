@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://anieajamian.com/assets/images/og-card-v3.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=27">
+<link rel="stylesheet" href="assets/style.css?v=28">
 
 </head>
 <body>
@@ -62,20 +62,56 @@
     </div>
 <h2>The Problem</h2>
 <div class="proj-body">
-        <p>The original inventory view displayed just six items at a time, forcing users to click carousel arrows repeatedly to browse a collection that could run into the hundreds or thousands. There was no way to sell more than one item at once, a serious limitation for gamers wanting to sell off large collections.</p>
+        <p>The original inventory forced users to click carousel arrows repeatedly through a collection that could run into the hundreds or thousands, and there was no way to sell more than one item at once, a serious limitation for gamers offloading large collections.</p>
+        <div class="cs-stat-row">
+          <div class="cs-stat"><div class="num">6</div><div class="lbl">items visible at a time, behind carousel arrows</div></div>
+          <div class="cs-stat"><div class="num">1</div><div class="lbl">item sellable at a time</div></div>
+        </div>
         <div class="img-caption">Original inventory design.</div><img src="assets/images/My-Items-Thumb-Resell.jpg" alt="Kalorian&#x27;s original inventory screen where items were listed one at a time" loading="lazy"></div>
 <h2>Approach</h2>
 <div class="proj-body">
-        <p>I ran competitive analysis on other resale platforms, stayed in active conversation with beta users through the company Discord, and researched how inventory is actually presented inside games. That last piece shaped the key insight: inventory screens inside games use small, unlabeled thumbnails because players already recognize their own items, unlike a storefront, where a stranger needs larger images and labels to browse unfamiliar things.</p>
+        <p>I ran competitive analysis on other resale platforms, stayed in active conversation with beta users through the company Discord, and researched how inventory is actually presented inside games. That last piece shaped the key insight, that a game and a storefront want opposite things from a thumbnail:</p>
+        <div class="cs-fork">
+          <div class="cs-path plain">
+            <span class="cs-badge">Inside a game</span>
+            <h4><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M6 12h4M8 10v4"/><circle cx="15" cy="11" r="1"/><circle cx="18" cy="13" r="1"/></svg> Small, unlabeled thumbnails</h4>
+            <p class="src">Players already recognize their own items</p>
+            <ul><li><span class="mk">&bull;</span> Speed and density over explanation</li></ul>
+          </div>
+          <div class="cs-path plain">
+            <span class="cs-badge">In a storefront</span>
+            <h4><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg> Larger, labeled images</h4>
+            <p class="src">Strangers browse unfamiliar items</p>
+            <ul><li><span class="mk">&bull;</span> Clarity over density</li></ul>
+          </div>
+        </div>
+        <div class="cs-decision">
+          <span class="lbl">My call</span>
+          <p class="txt">Small thumbnails with names on hover in the seller's own inventory, and larger labeled thumbnails on the discovery storefront where people browse unfamiliar items.</p>
+        </div>
         <div class="img-caption">Inventory search.</div><img src="assets/images/Search-Your-Inventory.png" alt="Kalorian inventory search interface for filtering a large item catalog" loading="lazy"><div class="img-caption">Selecting items from search results.</div><img src="assets/images/Select-Items-Search-Results.png" alt="Selecting items from search results" loading="lazy"><div class="img-caption">Setting prices across selected items in one batch.</div><img src="assets/images/Set-Price-Saved.png" alt="Setting prices in bulk" loading="lazy"></div>
 <h2>Solution</h2>
 <div class="proj-body">
-        <ul>
-          <li>Introduced a "selling state": toggle into it, multi-select items with taps, and set prices for everything selected in one batch instead of one item at a time</li>
-          <li>Added a bottom bar that tracked selection count in real time as users tapped through items</li>
-          <li>Reduced thumbnail size for the inventory view, moving item names to hover/tap, while keeping larger labeled thumbnails on the discovery storefront where users are browsing unfamiliar items</li>
-          <li>Added game-based filtering at the top of the inventory view</li>
-        </ul>
+        <p>The core change was a "selling state" that turned bulk listing into a quick, repeatable flow:</p>
+        <div class="cs-flow">
+          <div class="cs-step">
+            <div class="disc"><svg class="cs-ico cs-ico-lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="16" cy="12" r="3"/></svg></div>
+            <div class="st">Toggle selling state</div><div class="sd">flip inventory into sell mode</div>
+          </div>
+          <div class="cs-step">
+            <div class="disc"><svg class="cs-ico cs-ico-lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg></div>
+            <div class="st">Multi-select items</div><div class="sd">tap to add, no arrows</div>
+          </div>
+          <div class="cs-step">
+            <div class="disc"><svg class="cs-ico cs-ico-lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 15h18"/><path d="M7 19h5"/></svg></div>
+            <div class="st">Live count in the sell bar</div><div class="sd">selection tracked in real time</div>
+          </div>
+          <div class="cs-step">
+            <div class="disc"><svg class="cs-ico cs-ico-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
+            <div class="st">Price the whole batch</div><div class="sd">one set of prices, all at once</div>
+          </div>
+        </div>
+        <p>Game-based filtering at the top of the inventory made a large, multi-game collection easy to narrow before selecting.</p>
         <div class="img-caption">Early iteration: sell bar tracking selected items.</div><img src="assets/images/Sell-Bar-v1.jpg" alt="Early sell bar iteration" loading="lazy"><div class="img-caption">Early iteration: expanded selling view (v1).</div><img src="assets/images/Sell-Items-Expanded-View-v1.jpg" alt="Early expanded selling view" loading="lazy"><div class="img-caption">Later iteration: expanded selling view (v4).</div><img src="assets/images/Sell-Items-Expanded-View-v4.jpg" alt="Later expanded selling view" loading="lazy"><div class="img-caption">Final redesigned inventory system.</div><img src="assets/images/New-Inventory.jpg" alt="Kalorian&#x27;s redesigned inventory system supporting bulk listing and full-inventory browsing" loading="lazy"><div style="position:relative;padding-top:56.25%;margin:8px 0 8px;"><iframe src="https://player.vimeo.com/video/874169246?dnt=1" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allowfullscreen loading="lazy" title="Kalorian inventory demo"></iframe></div><div class="img-caption" style="margin-top:0;">Video walkthrough of the final inventory and bulk-selling experience.</div></div>
 <h2>Outcome</h2>
 <div class="proj-body">
