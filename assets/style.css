@@ -1181,6 +1181,16 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 .cs-stat .lbl{ font-size:13.5px; color:var(--ink-soft); max-width:180px; margin-top:8px; }
 .cs-stat-cap{ font-size:12.5px; color:var(--muted); margin:16px 0 0; }
 
+/* ---- broken-link step in a flow (a step users kept skipping) ---- */
+.cs-step.gap .disc{ border-style:dashed; border-color:var(--muted); color:var(--muted); }
+.cs-step.gap .st{ color:var(--muted); }
+
+/* ---- stacked rename chips (old label struck through -> new label) ---- */
+.cs-rename-list{ display:flex; flex-direction:column; gap:14px; margin:8px 0 0; }
+.cs-rename-row{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+.cs-rename-row .ctx{ font-family:'Karla',sans-serif; font-size:12px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.06em; color:var(--muted); min-width:96px; }
+
 /* ---- responsive ---- */
 @media (max-width: 600px){
   .cs-fork{ grid-template-columns:1fr; }
