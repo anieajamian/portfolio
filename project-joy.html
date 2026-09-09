@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://anieajamian.com/assets/images/og-card-v3.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=27">
+<link rel="stylesheet" href="assets/style.css?v=28">
 
 </head>
 <body>
@@ -69,24 +69,72 @@
     </div>
 <h2>The Problem</h2>
 <div class="proj-body">
-        <p>Feedback from Intercom and FullStory pointed to the same root issue: a "reserve" model that never resolved itself.</p>
-        <ul>
-          <li>Guests pressed "Add to Cart and Reserve," then had to remember to come back and manually mark the gift purchased after buying it through an external vendor</li>
-          <li>Reservations sat indefinitely with no natural expiration, so couples relied on email reminders to nudge guests toward finishing</li>
-          <li>The flow defaulted to a pre-selected, often unfamiliar payment vendor instead of surfacing the simple cash/check options guests already trusted</li>
-        </ul>
+        <p>Feedback from Intercom and FullStory pointed to the same root issue: a "reserve" that never resolved itself. The purchase depended on a step guests kept forgetting.</p>
+        <div class="cs-flow">
+          <div class="cs-step">
+            <div class="disc"><svg class="cs-ico cs-ico-lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L23 7H6"/></svg></div>
+            <div class="st">Add to Cart &amp; Reserve</div><div class="sd">guest holds the gift</div>
+          </div>
+          <div class="cs-step">
+            <div class="disc"><svg class="cs-ico cs-ico-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></div>
+            <div class="st">Buy externally</div><div class="sd">through an outside vendor</div>
+          </div>
+          <div class="cs-step gap">
+            <div class="disc"><svg class="cs-ico cs-ico-lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <div class="st">Come back later</div><div class="sd">easy to forget</div>
+          </div>
+          <div class="cs-step gap">
+            <div class="disc"><svg class="cs-ico cs-ico-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <div class="st">Manually mark purchased</div><div class="sd">the step that got skipped</div>
+          </div>
+        </div>
+        <div class="cs-flow-foot">
+          <div class="cs-flow-chip old"><b>The result</b>Reservations sat indefinitely with no expiration, so couples chased gifts with email reminders and many never arrived. The flow also defaulted to an unfamiliar payment vendor instead of the cash and check options guests already trusted.</div>
+        </div>
     </div>
 <h2>Approach</h2>
 <div class="proj-body">
+        <p>The redesign came down to one conceptual move, from an open-ended reserve to a completed purchase:</p>
+        <div class="cs-map-row">
+          <div class="cs-map-cell prob">
+            <div class="k">Reserve model · before</div>
+            <div class="t">A gift was "reserved" on intent. Guests had to remember to return and mark it purchased, so <em>intent</em> and <em>done</em> never met.</div>
+          </div>
+          <div class="cs-map-arrow"><svg viewBox="0 0 22 14" aria-hidden="true"><path d="M0 7h16m0 0-5-5m5 5-5 5"/></svg></div>
+          <div class="cs-map-cell fix">
+            <div class="k">Cart &amp; purchase · after</div>
+            <div class="t">A gift isn't marked as given until the guest <strong>completes and confirms the purchase</strong>. Intent and done collapse into one step.</div>
+          </div>
+        </div>
         <p>I moved the flow from a reserve model to a shopping-cart-and-purchase model: a gift wasn't marked as given to the couple until the guest actually completed and confirmed the purchase, closing the gap between "intent" and "done." I also broke the journey into focused steps (guest information became its own step rather than being bundled in) and removed payment pre-selection so guests could choose a method they already recognized.</p>
         <div class="img-caption">Original cash-gift flow.</div><img src="assets/images/original-cash-flow.png" alt="Screens of Joy&#x27;s original cash-gift flow using the confusing reserve model" loading="lazy"><div class="img-caption">Redesigned cash-gift flow.</div><img src="assets/images/new-cash-flow-1.png" alt="Screens of Joy&#x27;s redesigned cash-gift flow using a clear cart-and-purchase model" loading="lazy"></div>
 <h2>Solution</h2>
 <div class="proj-body">
-        <ul>
-          <li>Renamed "Reserve" to "Add to Cart" / "Give Now" to create real urgency instead of implying an open-ended hold</li>
-          <li>Broke the purchase journey into clearer, single-purpose steps with tactical messaging on each screen</li>
-          <li>Applied the same fixes to the affiliate-gift purchase flow (e.g. "Add to Cart &amp; Reserve" became "Buy Now") and guests were routed directly forward after entering their details instead of being dropped back into the cart</li>
-        </ul>
+        <div class="cs-takeaways">
+          <div class="cs-take">
+            <div class="n">01</div>
+            <div>
+              <div class="tt">Familiar Call to Actions Win</div>
+              <p class="dd">Swapping an open-ended "hold" for words guests already recognized created real urgency instead of an indefinite reservation.</p>
+              <span class="cs-rename"><span class="old">Reserve</span><span class="arr">&rarr;</span><span class="newp">Add to Cart / Give Now</span></span>
+            </div>
+          </div>
+          <div class="cs-take">
+            <div class="n">02</div>
+            <div>
+              <div class="tt">Single Task Per Screen</div>
+              <p class="dd">Broke the purchase journey into clearer, single-purpose steps, with tactical messaging on each screen and guest information split into its own step.</p>
+            </div>
+          </div>
+          <div class="cs-take">
+            <div class="n">03</div>
+            <div>
+              <div class="tt">Scalable Solutions</div>
+              <p class="dd">Applied the same pattern to the affiliate-gift flow, and routed guests straight forward after entering their details instead of dropping them back into the cart.</p>
+              <span class="cs-rename"><span class="old">Add to Cart &amp; Reserve</span><span class="arr">&rarr;</span><span class="newp">Buy Now</span></span>
+            </div>
+          </div>
+        </div>
         <div class="img-caption">Final cash-gift purchase experience.</div><img src="assets/images/joy-main-img.png" alt="Final Joy cash-gift purchase experience showing the completed give-now flow" loading="lazy"></div>
 <h2>Impact</h2>
 <div class="proj-body">

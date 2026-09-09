@@ -1181,6 +1181,18 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 .cs-stat .lbl{ font-size:13.5px; color:var(--ink-soft); max-width:180px; margin-top:8px; }
 .cs-stat-cap{ font-size:12.5px; color:var(--muted); margin:16px 0 0; }
 
+/* ---- broken-link step in a flow (a step users kept skipping) ---- */
+.cs-step.gap .disc{ border-style:dashed; border-color:var(--muted); color:var(--muted); }
+.cs-step.gap .st{ color:var(--muted); }
+
+/* ---- titled takeaways (numbered, scannable; can nest a rename chip) ---- */
+.cs-takeaways{ display:flex; flex-direction:column; gap:24px; margin:8px 0 4px; }
+.cs-take{ display:grid; grid-template-columns:34px 1fr; gap:16px; align-items:start; }
+.cs-take .n{ font-family:'Petrona',serif; font-size:22px; color:var(--accent); line-height:1.15; }
+.cs-take .tt{ font-family:'Karla',sans-serif; font-weight:700; font-size:15px; color:var(--ink); margin:2px 0 5px; }
+.cs-take .dd{ font-size:14px; line-height:1.5; color:var(--ink-soft); margin:0; max-width:none; }
+.cs-take .cs-rename{ margin-top:11px; }
+
 /* ---- responsive ---- */
 @media (max-width: 600px){
   .cs-fork{ grid-template-columns:1fr; }
