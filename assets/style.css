@@ -494,6 +494,11 @@ footer.site-footer{
   color: var(--ink);
   margin-bottom: 14px;
 }
+.job-desc{
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: -10px 0 14px;
+}
 .job ul{ margin: 0; padding-left: 20px; color: var(--ink-soft); }
 .job li{ margin-bottom: 11px; font-size: 15.5px; line-height: 1.6; }
 .job li:last-child{ margin-bottom: 0; }
