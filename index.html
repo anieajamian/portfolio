@@ -248,7 +248,7 @@
   var U={};['uRes','uT','uFreq','uWarp','uCover','uGlow','uSpeed','uBright','uMob']
     .forEach(function(n){U[n]=gl.getUniformLocation(prog,n);});
 
-  /* Sunset clouds — fixed look */
+  /* Sunset clouds: fixed look */
   var FREQ=1.8,WARP=2.2,COVER=0.0,GLOW=0.7,SPEED=0.5;
 
   var dpr=Math.min(window.devicePixelRatio||1,1.75),mob=false;
