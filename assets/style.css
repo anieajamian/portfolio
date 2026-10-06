@@ -365,6 +365,16 @@ footer.site-footer{
   line-height: 1.6;
   color: var(--ink-soft);
 }
+/* Line up names across a row even when a title wraps: each card spans two
+   shared rows (quote, caption), so captions start at the same height. */
+@supports (grid-template-rows: subgrid){
+  .quote-card{
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+    row-gap: 0;
+  }
+}
 .q-name{
   display: block;
   font-weight: 700;
