@@ -58,7 +58,7 @@ PAGE1_JOBS = [
      "Global hotel company, booking and loyalty", [
          "Shaped the UX for Wyndham's booking and loyalty replatform across web and mobile with the design director, moving the business off legacy systems so it could ship features faster and add planned AI features",
          "Assigned as design lead for the replatform: delegated flows across a team of 4–6 designers and gave feedback on their work",
-         "Redesigned Rooms & Rates, the main decision screen in booking, after an earlier version tested well but lost conversion. Shipped a smaller validated update and set up the bigger changes as A/B tests",
+         "Redesigned Rooms & Rates, the main booking decision screen. After my first version cut mobile bookings 5% in an A/B test, shipped a smaller validated update and staged the bigger changes as new tests",
          "Designed and tested tiered cash-plus-points rate options that increased points bookings by 4%",
          "Worked with product, research, brand leadership, and an outside engineering vendor to decide what shipped and in what order",
      ]),
