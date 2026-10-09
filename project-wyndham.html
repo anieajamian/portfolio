@@ -65,10 +65,11 @@
 <div class="proj-body">
         <p>Users struggled to compare rooms because of inconsistent pricing structures, dense content, and unclear hierarchy. Because Wyndham operates as a franchise system, room details and pricing vary widely from property to property, since franchisees own their own content. Previous redesigns by other designers had improved usability on paper but hurt conversion, so the organization had grown cautious about touching this flow at all. My own first redesign, A/B tested before the replatform and never implemented, ran into the same problem:</p>
         <div class="cs-stat-row">
-          <div class="cs-stat"><div class="num">&lt;1%</div><div class="lbl">difference in overall bookings</div></div>
+          <div class="cs-stat"><div class="num">&lt;1%</div><div class="lbl">difference in desktop bookings</div></div>
           <div class="cs-stat"><div class="num">&minus;5%</div><div class="lbl">drop in mobile bookings</div></div>
         </div>
-        <p class="cs-stat-cap">A bigger visual change didn&rsquo;t move bookings, and it cost us on mobile. That result shaped every call that followed.</p>
+        <p class="cs-stat-cap">A bigger visual change didn&rsquo;t move desktop bookings, and it cost us on mobile. That result shaped the approach that followed.</p>
+        <p>Past redesigns, including my first one, were big overhauls made without really knowing what was affecting the results. So I decided to launch new designs that match production fairly closely, then make incremental changes after launch.</p>
         <p><strong>Objectives:</strong></p>
         <ul>
           <li>Improve comparison: help users evaluate room types and rates side by side</li>
@@ -82,7 +83,7 @@
         <div class="cs-frow-grid">
           <div class="cs-frow"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v16M9 8h1M9 12h1M9 16h1"/><path d="M14 21V9h4a1 1 0 0 1 1 1v11"/></svg> Franchisees own room &amp; rate content, so descriptions and amenities are inconsistent property to property</div>
           <div class="cs-frow"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg> Some rooms surfaced 5+ rate options, well past the 3&ndash;4 users could comfortably compare</div>
-          <div class="cs-frow"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg> No standard naming convention (e.g. "non-smoking" labels on every room in an already non-smoking hotel)</div>
+          <div class="cs-frow"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg> No standardized naming convention for rooms or rates (e.g. redundant "non-smoking" labels on every room in an already non-smoking hotel)</div>
           <div class="cs-frow"><svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg> Rate types lacked clear differentiation, making perks and inclusions hard to parse</div>
         </div>
     </div>
@@ -104,8 +105,8 @@
           </div>
         </div>
         <div class="cs-decision">
-          <span class="lbl">My call</span>
-          <p class="txt">Given the booking flow's sensitivity to conversion, improve clarity within the existing single-step model now, and explore modal-based rate expansion as a longer-term direction.</p>
+          <span class="lbl">Approach</span>
+          <p class="txt">Given the booking flow's sensitivity to conversion, I focused the near-term solution on improving clarity within the existing single-step model, while exploring modal-based rate expansion as a longer-term direction.</p>
         </div>
         <div class="img-caption">Competitive benchmarking across major hotel and OTA platforms.</div><img src="assets/images/Competitor-Examples-scaled.png" alt="Competitive benchmark of room-and-rate selection across major hotel and OTA booking platforms" loading="lazy">
         <div class="img-caption">Earlier exploration wireframes testing flow and layout directions.</div><img src="assets/images/Earlier-Exploration-Wireframes-scaled.png" alt="Earlier exploration wireframes" loading="lazy">
@@ -119,43 +120,39 @@
         <div class="img-caption">Exploring layout directions and updated design-system components.</div><img src="assets/images/New-Explorations-2-scaled.png" alt="Wyndham Rooms &amp; Rates layout explorations with updated design-system components" loading="lazy"></div>
 <h2>Validation</h2>
 <div class="proj-body">
-        <p>After stakeholder alignment, we moved forward with an incremental approach, refining the existing list-based layout while deferring more experimental patterns for post-launch validation, given the conversion sensitivity of the flow. We then ran usability testing (UserTesting) comparing the updated design against the live production experience across desktop and mobile prototypes.</p>
-        <p>The result was two-sided:</p>
+        <p>After stakeholder alignment, we moved forward with an incremental approach, refining the existing list-based layout while deferring more experimental patterns for post-launch validation, given the conversion sensitivity of the flow. Before launch, I worked with our UX researcher on a usability gut check (UserTesting), comparing the new design against the live site. The goal wasn&rsquo;t to optimize. It was to confirm nothing in the new design stood out as wrong for users.</p>
+        <p>Nothing raised a red flag. Most of the friction users raised was what we&rsquo;d already seen on the original design:</p>
         <div class="cs-fork">
           <div class="cs-path chosen">
             <span class="cs-badge">What worked</span>
             <ul>
               <li><span class="mk">&check;</span> Visual clarity and stronger imagery</li>
               <li><span class="mk">&check;</span> Easier navigation</li>
-              <li><span class="mk">&check;</span> Preferred over the live experience</li>
+              <li><span class="mk">&check;</span> No new usability problems introduced</li>
             </ul>
           </div>
           <div class="cs-path rejected">
-            <span class="cs-badge">Still fell short</span>
+            <span class="cs-badge">Known issues, still present</span>
             <ul>
-              <li><span class="mk">&#9675;</span> Inconsistent room naming; users still had to open detail views to compare</li>
-              <li><span class="mk">&#9675;</span> Vague rate titles made inclusions unclear</li>
-              <li><span class="mk">&#9675;</span> Many didn't notice the Price / Points toggle</li>
+              <li><span class="mk">&#9675;</span> About a third still had to open room details to compare, and inconsistent room naming made it harder</li>
+              <li><span class="mk">&#9675;</span> Rate titles were vague and confusing, so it was hard to tell rates apart or see what each included</li>
+              <li><span class="mk">&#9675;</span> About a third missed or misunderstood the Price / Points toggle</li>
             </ul>
           </div>
         </div>
-        <div class="img-caption">Updated desktop design: price view.</div><img src="assets/images/Price-1-scaled.png" alt="Updated Wyndham Rooms &amp; Rates desktop design in price view" loading="lazy"><div class="img-caption">Updated desktop design: points view.</div><img src="assets/images/Points-1.png" alt="Updated desktop design, points view" loading="lazy"><div class="img-caption">Room details &amp; amenities modal.</div><img src="assets/images/Room-Details-Amenities-Modal.png" alt="Room details and amenities modal" loading="lazy"><div class="img-caption">Final mobile designs shipped at launch.</div><img src="assets/images/For-Launch-Mobile-2-scaled.png" alt="Final Wyndham Rooms &amp; Rates mobile designs shipped at launch" loading="lazy"></div>
+        <p>Because these issues weren&rsquo;t new, we didn&rsquo;t change the design in response. We kept it close to the current site and planned to test these pieces one at a time after launch.</p>
+        <div class="img-caption">Updated desktop design: price view.</div><img src="assets/images/Price-1-scaled.png" alt="Updated Wyndham Rooms &amp; Rates desktop design in price view" loading="lazy"><div class="img-caption">Updated desktop design: points view.</div><img src="assets/images/Points-1.png" alt="Updated desktop design, points view" loading="lazy"><div class="img-caption">Room details &amp; amenities modal.</div><img src="assets/images/Room-Details-Amenities-Modal.png" alt="Room details and amenities modal" loading="lazy"><div class="img-caption">Final mobile designs.</div><img src="assets/images/For-Launch-Mobile-2-scaled.png" alt="Final Wyndham Rooms &amp; Rates mobile designs" loading="lazy"></div>
 <h2>Outcome</h2>
 <div class="proj-body">
         <p class="pull">The safest move wasn't the most ambitious redesign. It was staging change deliberately in a flow where past ambition had already cost conversion.</p>
-        <p>Given the scale and complexity of a franchise-driven ecosystem, we shipped the most validated, stable version of the experience at launch and staged the rest:</p>
+        <p>Given the scale and complexity of a franchise-driven ecosystem, we kept the launch design close to the current site and turned what we heard in testing into a plan for incremental tests after launch:</p>
         <div class="cs-phases">
           <div class="cs-phase now">
-            <span class="ph">Shipped at launch</span>
+            <span class="ph">Test after launch</span>
             <ul>
-              <li><span class="mk">&bull;</span> Anchored filters and the Price / Points toggle for easier access</li>
-              <li><span class="mk">&bull;</span> Concise rate descriptions</li>
-            </ul>
-          </div>
-          <div class="cs-phase">
-            <span class="ph">A/B test next</span>
-            <ul>
-              <li><span class="mk">&bull;</span> Room attributes: occupancy, square footage, amenities</li>
+              <li><span class="mk">&bull;</span> Filters and Price / Points toggle placement</li>
+              <li><span class="mk">&bull;</span> Concise, clearer rate descriptions</li>
+              <li><span class="mk">&bull;</span> Room attributes in the list view (occupancy, square footage, amenities)</li>
               <li><span class="mk">&bull;</span> Richer rate context like cancellation policy</li>
             </ul>
           </div>
@@ -167,7 +164,7 @@
             </ul>
           </div>
         </div>
-        <p>Rooms &amp; Rates is one piece of a 1.5-year replatform of Wyndham&rsquo;s entire website and mobile apps, which is why results are still pending. The shipped design wasn&rsquo;t A/B tested on its own. Instead, we kept the proven layout largely intact and focused on cleanup, so we weren&rsquo;t repeating the risk my earlier test exposed. Success is defined against maintaining baseline booking performance while improving conversion, decision confidence, and rate-selection efficiency.</p>
+        <p>Rooms &amp; Rates is one piece of a 1.5-year replatform of Wyndham&rsquo;s entire website and mobile apps, so results are still pending. Instead of A/B testing a full redesign again, like the one that cost mobile bookings, we kept the launch design close to the current site and will test individual changes after launch. Success means holding baseline booking performance while improving conversion, decision confidence, and rate-selection efficiency.</p>
         <div class="img-caption">Card-based layout designed for future A/B testing.</div><img src="assets/images/RR-Redesign-Cards-Desktop-Trademark-scaled.png" alt="Card-based redesign for future testing" loading="lazy"><div class="img-caption">Expanded view of the card-based future-test layout.</div><img src="assets/images/RR-Redesign-Cards-Desktop-Trademark-Expanded-View-scaled.png" alt="Card-based redesign, expanded view" loading="lazy">
     </div>
   </div>
