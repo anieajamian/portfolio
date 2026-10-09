@@ -1203,6 +1203,7 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 .cs-rename .arr{ color:var(--accent); }
 .cs-rename .newp{ font-weight:700; color:var(--accent); font-size:13px; border:1px solid var(--accent);
   padding:2px 8px; border-radius:4px; }
+.cs-map-cell .t .cs-rename{ display:flex; width:fit-content; margin-top:10px; }
 .cs-map-cell .t strong{ color:var(--accent); font-weight:700; }
 .cs-map-cell .t em{ font-style:italic; color:var(--muted); }
 
