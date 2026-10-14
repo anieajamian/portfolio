@@ -675,24 +675,6 @@ footer.site-footer{
   line-height: 1.45;
 }
 
-.proj-summary{
-  font-size: 17px;
-  line-height: 1.6;
-  color: var(--ink-soft);
-  margin: 0 0 44px;
-  max-width: 700px;
-}
-.proj-summary .label{
-  display: block;
-  font-family: 'Karla', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  margin-bottom: 8px;
-}
-
 /* Glanceable metrics promoted to the top of a case study */
 .impact-band{
   margin: 0 0 44px;
