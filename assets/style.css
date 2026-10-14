@@ -650,6 +650,7 @@ footer.site-footer{
 .proj-meta{
   display: flex;
   gap: 12px 40px;
+  max-width: 760px;
   margin-top: 28px;
   padding: 14px 22px;
   background: var(--bg-alt);
