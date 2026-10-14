@@ -633,12 +633,12 @@ footer.site-footer{
 .proj-overview{ max-width: 760px; }
 .proj-overview h2{
   font-family: 'Karla', sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--accent);
-  margin: 0 0 12px;
+  margin: 0 0 16px;
 }
 .proj-overview p{
   font-size: 19px;
@@ -650,6 +650,7 @@ footer.site-footer{
 .proj-meta{
   display: flex;
   gap: 12px 40px;
+  max-width: 760px;
   margin-top: 28px;
   padding: 14px 22px;
   background: var(--bg-alt);
@@ -677,19 +678,21 @@ footer.site-footer{
 
 /* Glanceable metrics promoted to the top of a case study */
 .impact-band{
+  max-width: 760px;
   margin: 0 0 44px;
 }
 .impact-band > .label{
   display: block;
   font-family: 'Karla', sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--accent);
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 .impact-band .stat-row{ margin: 0; }
+.hero-img + .impact-band{ margin-top: 48px; }
 
 .hero-img{
   border-radius: var(--radius);
@@ -1254,8 +1257,8 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 
 /* ---- decision callout: accent label above, no box, no bar ---- */
 .cs-decision{ margin:20px 0 0; }
-.cs-decision .lbl{ display:block; font-family:'Karla',sans-serif; font-size:11px; font-weight:700;
-  text-transform:uppercase; letter-spacing:.08em; color:var(--accent); margin-bottom:6px; }
+.cs-decision .lbl{ display:block; font-family:'Karla',sans-serif; font-size:14px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.06em; color:var(--accent); margin-bottom:8px; }
 .cs-decision .txt{ font-size:14px; line-height:1.5; color:var(--ink-soft); margin:0; max-width:none; }
 
 /* ---- staged roadmap: now / next / later phase cards ---- */
