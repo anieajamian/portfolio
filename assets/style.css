@@ -656,6 +656,8 @@ footer.site-footer{
   background: var(--bg-alt);
   border-radius: var(--radius);
 }
+/* An odd item out (usually Team) takes the full row */
+.proj-meta > div:last-child:nth-child(odd){ grid-column: 1 / -1; }
 @media (max-width: 800px){
   .proj-overview p{ font-size: 17px; }
 }
