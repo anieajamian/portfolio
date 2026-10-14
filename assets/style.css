@@ -649,16 +649,18 @@ footer.site-footer{
 .proj-overview p:last-child{ margin-bottom: 0; }
 .proj-meta{
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px 28px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 40px;
   margin-top: 28px;
   padding: 16px 22px;
   background: var(--bg-alt);
   border-radius: var(--radius);
 }
 @media (max-width: 800px){
-  .proj-meta{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .proj-overview p{ font-size: 17px; }
+}
+@media (max-width: 560px){
+  .proj-meta{ grid-template-columns: 1fr; }
 }
 .proj-meta .label{
   font-size: 11px;
