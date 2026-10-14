@@ -626,7 +626,7 @@ footer.site-footer{
 }
 .back-link:hover{ color: var(--accent); }
 
-/* Overview leads; project facts sit below a thin divider */
+/* Overview leads; project facts sit in a compact strip below it */
 .proj-intro{
   margin: 36px 0 44px;
 }
@@ -650,9 +650,10 @@ footer.site-footer{
 .proj-meta{
   display: flex;
   gap: 12px 40px;
-  margin-top: 32px;
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
+  margin-top: 28px;
+  padding: 14px 22px;
+  background: var(--bg-alt);
+  border-radius: var(--radius);
 }
 .proj-meta > div{ flex: 1 1 0; min-width: 0; }
 @media (max-width: 800px){
