@@ -692,6 +692,7 @@ footer.site-footer{
   margin-bottom: 18px;
 }
 .impact-band .stat-row{ margin: 0; }
+.hero-img + .impact-band{ margin-top: 48px; }
 
 .hero-img{
   border-radius: var(--radius);
