@@ -91,7 +91,7 @@ PAGE2_JOBS = [
          "Led UX for AT&T's att.net, an ad-funded news and content portal with 45M+ users and $41M+ a year in ad revenue",
          "Redesigned navigation and content discovery across the portal's main sections, adding a horizontal content nav and testing it through several rounds of live A/B tests",
          "Raised vertical page views 41%, article page views 13%, and dropdown engagement 25%, which meant more ad inventory",
-         "Led and mentored 2 designers, and ran critiques on complex projects",
+         "Mentored 2 designers and ran critiques on complex projects",
          "Worked with AT&T's product team to balance reader experience against ad revenue goals, and with Synacor's engineers to decide what to test and ship next",
      ]),
     ("Alchemy50", "Designer, promoted to Senior Designer", "Oct 2014 – Sep 2016",
