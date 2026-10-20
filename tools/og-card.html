@@ -1,0 +1,115 @@
+<!doctype html>
+<!-- Social card (og-card). To regenerate: serve the repo root locally, then
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --use-angle=swiftshader --enable-unsafe-swiftshader --hide-scrollbars --window-size=1200,630 --force-device-scale-factor=2 --virtual-time-budget=4000 --screenshot=og.png http://localhost:PORT/tools/og-card.html
+  Save as a NEW assets/images/og-card-vN.jpg (new name busts LinkedIn/Slack caches) and update the og:image/twitter:image tags. --><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../assets/style.css?v=53">
+<style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden;}
+.hero-shader{width:1200px;height:630px;min-height:0!important;}
+.hero-shader .ghostA{display:none;}
+.hero-content{padding:0 0 64px 81px!important;align-items:center;}
+.hero-content>.wrap{padding:0!important;max-width:none!important;margin:0!important;}
+.hero-shader h1{font-size:62px!important;line-height:1.08;max-width:none;}
+.hero-shader h1 .grad{background:none!important;color:#F9C7A6!important;-webkit-text-fill-color:#F9C7A6;text-shadow:0 2px 24px rgba(6,14,40,.35);}
+.hero-shader .hero-role{font-size:20px!important;margin-top:44px!important;}
+.hero-shader .hero-role .dot{margin:0 .45em;}
+</style></head><body>
+<section class="hero-shader" id="hero">
+  <canvas id="gl"></canvas>
+  <div class="ghostA" id="ghostA" aria-hidden="true"></div>
+  <svg class="grain" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true"><filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#gr)"/></svg>
+  <div class="scrim"></div>
+  <div class="hero-content"><div class="wrap">
+    <h1>Hi, I&rsquo;m Anie.<br>I take on the problems<br>where the stakes are <span class="grad">highest</span><br>and the rules are <span class="grad">messiest.</span></h1>
+    <p class="hero-role">Senior Product Designer<span class="dot">&middot;</span>Los Angeles, CA</p>
+  </div></div>
+</section>
+<!-- Homepage hero: WebGL opaque sunset clouds -->
+<script>
+(function(){
+  var hero=document.getElementById('hero'),canvas=document.getElementById('gl');
+  if(!hero||!canvas)return;
+  var reduce=true;
+  var gl=null;try{gl=canvas.getContext('webgl')||canvas.getContext('experimental-webgl');}catch(e){}
+  if(!gl){return;}
+
+  var mx=0,my=0,ghost=document.getElementById('ghostA');
+  hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();
+    mx=(e.clientX-r.left)/r.width-.5;my=(e.clientY-r.top)/r.height-.5;
+    if(ghost)ghost.style.transform='translateY(-50%) translate('+(mx*-20)+'px,'+(my*-16)+'px)';});
+
+  var vsrc='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+  var fsrc=[
+'precision highp float;',
+'uniform vec2 uRes;uniform float uT,uFreq,uWarp,uCover,uGlow,uSpeed,uBright,uMob;',
+'vec3 C0=vec3(0.031,0.188,0.431);vec3 C1=vec3(0.024,0.439,0.871);',
+'vec3 C2=vec3(0.129,0.451,0.827);vec3 C3=vec3(0.420,0.475,0.753);',
+'vec3 C4=vec3(0.690,0.490,0.690);vec3 C5=vec3(0.945,0.494,0.624);',
+'vec3 CR=vec3(0.941,0.537,0.431);vec3 GD=vec3(0.957,0.769,0.541);',
+'vec3 CLOUD_SHADOW=vec3(0.482,0.451,0.612);',
+'vec3 CLOUD_LIT=vec3(0.985,0.760,0.640);',
+'vec3 CLOUD_COOL=vec3(0.925,0.706,0.769);',
+'vec3 GLOWCOL=vec3(0.968,0.700,0.560);',
+'float hash(vec2 p){vec3 p3=fract(vec3(p.xyx)*0.1031);p3+=dot(p3,p3.yzx+33.33);return fract((p3.x+p3.y)*p3.z);}',
+'float noise(vec2 p){vec2 i=floor(p);vec2 f=fract(p);vec2 u=f*f*(3.-2.*f);',
+'  return mix(mix(hash(i),hash(i+vec2(1,0)),u.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),u.x),u.y);}',
+'float fbm(vec2 p){float v=0.,a=0.5;mat2 m=mat2(1.6,1.2,-1.2,1.6);',
+'  for(int i=0;i<6;i++){v+=a*noise(p);p=m*p;a*=0.5;}return v;}',
+'vec3 ramp(float t){t=clamp(t,0.,1.);vec3 c=mix(C0,C1,smoothstep(0.0,0.20,t));',
+'  c=mix(c,C2,smoothstep(0.20,0.38,t));c=mix(c,C3,smoothstep(0.38,0.54,t));',
+'  c=mix(c,C4,smoothstep(0.54,0.70,t));c=mix(c,C5,smoothstep(0.70,0.84,t));',
+'  c=mix(c,CR,smoothstep(0.84,0.94,t));c=mix(c,GD,smoothstep(0.94,1.0,t));return c;}',
+'void main(){vec2 uv=gl_FragCoord.xy/uRes.xy;vec2 p=uv;p.x*=uRes.x/uRes.y;',
+'  float t=uT*uSpeed;',
+'  vec3 sky=ramp(clamp(1.0-uv.y,0.0,1.0));',
+'  vec2 wp=p*uFreq;',
+'  vec2 qv=vec2(fbm(wp+vec2(0.0,t*0.06)),fbm(wp+vec2(3.1,1.7)-t*0.05));',
+'  float dens=fbm(wp+uWarp*qv+vec2(t*0.04,0.0));',
+'  float cover=smoothstep(0.52-uCover,0.82,dens);',
+'  cover*=mix(0.14,1.0,smoothstep(0.92,0.22,uv.y));',
+'  float lit=smoothstep(0.44,0.82,dens);',
+'  vec3 cloudCol=mix(CLOUD_SHADOW,mix(CLOUD_COOL,CLOUD_LIT,0.6),lit);',
+'  cloudCol=mix(cloudCol,mix(cloudCol,GLOWCOL,0.55),smoothstep(0.55,0.0,uv.y));',
+'  vec2 sun=vec2(0.5,0.05);float gg=exp(-length((uv-sun)*vec2(1.0,2.2))*3.2)*uGlow;',
+'  sky+=GLOWCOL*gg*0.6;cloudCol+=GLOWCOL*gg*0.4;',
+'  vec3 col=mix(sky,cloudCol,cover);',
+'  col+=hash(gl_FragCoord.xy+t)*0.04-0.02;',
+'  float vig=smoothstep(1.2,0.3,length(uv-0.5));col*=0.9+0.1*vig;',
+'  col*=mix(uBright, mix(0.88,1.20,uv.y), uMob);',
+'  gl_FragColor=vec4(clamp(col,0.0,1.0),1.0);}'
+].join('\n');
+
+  function sh(ty,src){var o=gl.createShader(ty);gl.shaderSource(o,src);gl.compileShader(o);
+    if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)){console.warn(gl.getShaderInfoLog(o));return null;}return o;}
+  var vs=sh(gl.VERTEX_SHADER,vsrc),fs=sh(gl.FRAGMENT_SHADER,fsrc);if(!vs||!fs)return;
+  var prog=gl.createProgram();gl.attachShader(prog,vs);gl.attachShader(prog,fs);gl.linkProgram(prog);
+  if(!gl.getProgramParameter(prog,gl.LINK_STATUS)){console.warn(gl.getProgramInfoLog(prog));return;}
+  gl.useProgram(prog);
+  var buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+  var loc=gl.getAttribLocation(prog,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  var U={};['uRes','uT','uFreq','uWarp','uCover','uGlow','uSpeed','uBright','uMob']
+    .forEach(function(n){U[n]=gl.getUniformLocation(prog,n);});
+
+  /* Sunset clouds: fixed look */
+  var FREQ=1.8,WARP=2.2,COVER=0.0,GLOW=0.7,SPEED=0.5;
+
+  var dpr=Math.min(window.devicePixelRatio||1,1.75),mob=false;
+  function resize(){var w=hero.clientWidth,h=hero.clientHeight;
+    canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);
+    canvas.style.width=w+'px';canvas.style.height=h+'px';gl.viewport(0,0,canvas.width,canvas.height);
+    mob=(window.innerWidth<680)||(window.innerHeight<520);}
+  window.addEventListener('resize',resize);resize();canvas.classList.add('ready');
+
+  var start=performance.now(),raf;
+  function frame(now){var t=(now-start)/1000;
+    gl.uniform2f(U.uRes,canvas.width,canvas.height);gl.uniform1f(U.uT,reduce?8.0:t);
+    gl.uniform1f(U.uFreq,FREQ);gl.uniform1f(U.uWarp,WARP);gl.uniform1f(U.uCover,COVER);
+    gl.uniform1f(U.uGlow,mob?GLOW*0.45:GLOW);gl.uniform1f(U.uSpeed,SPEED);
+    gl.uniform1f(U.uBright,1.0);gl.uniform1f(U.uMob,mob?1.0:0.0);
+    gl.drawArrays(gl.TRIANGLES,0,3);if(!reduce)raf=requestAnimationFrame(frame);}
+  raf=requestAnimationFrame(frame);
+  if(reduce)frame(start+8000);
+})();
+</script>
+</body></html>
