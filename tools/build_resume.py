@@ -57,7 +57,7 @@ PAGE1_JOBS = [
     ("Wyndham Hotels & Resorts", "Senior UI/UX Designer, Contract", "May 2024 – Present",
      "Global hotel company, booking and loyalty", [
          "Shaped the UX for Wyndham's booking and loyalty replatform across web and mobile with the design director, moving the business off legacy systems so it could ship features faster and add planned AI features",
-         "Assigned as design lead for the replatform, and supported the design director in delegating flows and giving feedback across a team of 4–6 designers",
+         "Led design for Rooms & Rates and other core flows across the web replatform, and mentored other designers on the team",
          "Redesigned Rooms & Rates, the main booking decision screen. After my first version cut mobile bookings 5% in an A/B test, designed a smaller, usability-tested update and staged bigger changes for post-launch tests",
          "Designed and tested tiered cash-plus-points rate options that increased points bookings by 4%",
          "Worked with product, research, brand leadership, and an outside engineering vendor to decide what shipped and in what order",
