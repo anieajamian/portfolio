@@ -58,14 +58,14 @@ PAGE1_JOBS = [
      "Global hotel company, booking and loyalty", [
          "Shaped the UX for Wyndham's booking and loyalty replatform across web and mobile with the design director, moving the business off legacy systems so it could ship features faster and add planned AI features",
          "Led design for the homepage, core flows, and most-used components across the web replatform, and mentored other designers on the team",
-         "Redesigned Rooms & Rates, the main booking decision screen. After my first version cut mobile bookings 5% in an A/B test, designed a smaller, usability-tested update and staged bigger changes for post-launch tests",
-         "Designed and tested tiered cash-plus-points rate options that increased points bookings by 4%",
+         "Designed and shipped tiered cash-plus-points rates that raised desktop points bookings 4% in an A/B test",
+         "Redesigned Rooms & Rates, the main booking decision screen. When A/B testing showed my first version was flat on desktop and down 5% on mobile against the live page, I changed approach, designing a smaller, usability-tested update and moving bigger changes into post-launch tests",
          "Worked with product, research, brand leadership, and an outside engineering vendor to decide what shipped and in what order",
      ]),
     ("Joy", "Senior Product Designer", "Oct 2022 – Jul 2023",
      "Wedding website, registry, and gifting marketplace", [
          "Led product design for registry and checkout on Joy's gifting marketplace, making it easier for guests to find, pick, and buy gifts",
-         "Rebuilt the cash gift flow so guests could tell when a gift was done and couples could trust it would arrive, cutting purchase-confusion support tickets by 75%",
+         "Rebuilt the cash gift flow so guests could tell when a gift was done and couples could trust it would arrive, cutting purchase-confusion support tickets 75% after launch",
          "Found where guests got stuck across registry and checkout using behavioral data, prototypes, usability tests, and A/B tests, then shipped UX and messaging fixes",
      ]),
     ("Medly Pharmacy", "Senior Product Designer", "May 2021 – Aug 2022",
@@ -82,7 +82,7 @@ PAGE1_JOBS = [
 PAGE2_JOBS = [
     ("Contact Systems", "Senior Product Designer", "Sep 2019 – Jul 2020",
      "Web3 marketplace for digital gaming items", [
-         "Only designer at the company. Launched Kalorian, a blockchain marketplace where players bought and sold digital gaming items, and owned its product design, UI, and branding",
+         "Launched Kalorian, a blockchain marketplace where players bought and sold digital gaming items, as the company's only designer, owning its product design, UI, and branding",
          "Built the company's first design system",
          "Researched and redesigned inventory and selling so players could browse their full catalog instead of 6 items at a time, and list thousands of items in bulk instead of one by one",
      ]),
@@ -90,7 +90,7 @@ PAGE2_JOBS = [
      "White-label portal for AT&T's att.net, 45M+ users", [
          "Led UX for AT&T's att.net, an ad-funded news and content portal with 45M+ users and $41M+ a year in ad revenue",
          "Redesigned navigation and content discovery across the portal's main sections, adding a horizontal content nav and testing it through several rounds of live A/B tests",
-         "Raised vertical page views 41%, article page views 13%, and dropdown engagement 25%, which meant more ad inventory",
+         "Shipped the new nav after A/B tests showed 41% more vertical page views, 13% more article page views, and 25% more dropdown engagement, adding ad inventory across the portal",
          "Mentored 2 designers and ran critiques on complex projects",
          "Worked with AT&T's product team to balance reader experience against ad revenue goals, and with Synacor's engineers to decide what to test and ship next",
      ]),
@@ -220,7 +220,7 @@ class Resume:
         gap = 22
         for j in PAGE1_JOBS:
             self.job(*j, gap_before=gap)
-            gap = 30
+            gap = 26  # tighter than page 2 so page 1 fits
         assert self.y < PAGE_H - 36, f"page 1 overflows (last baseline {self.y})"
         c.showPage()
 
