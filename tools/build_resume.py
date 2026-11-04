@@ -97,7 +97,7 @@ PAGE2_JOBS = [
     ("Alchemy50", "Designer, promoted to Senior Designer", "Oct 2014 – Sep 2016",
      "Design agency for fintech and financial services clients", [
          "Designed two financial planning tools for advisors: one they used with clients to plan for retirement, a home, or college, and a denser one built for advisors only",
-         "Worked on web and mobile apps for financial clients in data research, analytics, and asset management",
+         "Designed and shipped dashboards, charts, and data tables for financial clients' web and mobile apps in data research, analytics, and asset management",
          "Designed branding, websites, and marketing materials that helped financial companies explain their services more clearly",
      ]),
 ]
