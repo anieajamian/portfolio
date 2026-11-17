@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-  var triggers = document.querySelectorAll('.hero-img img, .proj-body img, .screen-row img, .screen-solo img');
+  var triggers = document.querySelectorAll('.hero-img img, .proj-body img:not(.cs-app img), .screen-row img, .screen-solo img');
   if(!triggers.length) return;
 
   var overlay = document.createElement('div');
