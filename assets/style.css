@@ -306,6 +306,7 @@ header.site-nav{
 }
 
 .case-hero .wip-pill{ margin: 0 0 14px; }
+.screen-row.tb-then{ max-width: 600px; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
 /* Timebar thumbnail, drawn in CSS: one bar per day, lighter end = free time */
 .tb-thumb{
