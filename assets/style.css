@@ -1397,16 +1397,25 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 }
 
 /* ---- native app screens: scrollable phone frames (outline style) ---- */
-.cs-app-row{ display:grid; grid-template-columns:repeat(3, minmax(0, 260px)); gap:32px;
+.cs-app-row{ display:grid; grid-template-columns:repeat(3, minmax(0, 260px)); gap:36px; padding:0 4px;
   justify-content:start; margin:30px 0 12px; }
 .cs-app{ margin:0; min-width:0; }
-.cs-app-frame{ border:1.5px solid var(--ink); border-radius:40px; padding:9px; background:var(--white); }
+.cs-app{ position:relative; container-type:inline-size; }
+/* realistic device: thin black bezel, screen edge to edge, island + side buttons */
+.cs-app-frame{ position:relative; padding:2.6cqw; border-radius:16cqw;
+  background:#0f0f10; box-shadow:0 0 0 1px #3a3a3c inset, 0 0 0 1.5px #2a2a2c, 0 18px 36px -18px rgba(0,0,0,.35); }
+.cs-app-frame::before{ content:""; position:absolute; z-index:2; left:50%; top:calc(2.6cqw + 2.8cqw);
+  width:30cqw; height:8.8cqw; transform:translateX(-50%); border-radius:999px; background:#000; pointer-events:none; }
+.cs-app-frame::after{ content:""; position:absolute; right:-3px; top:27%; width:3px; height:12%;
+  border-radius:0 2px 2px 0; background:#2a2a2c; }
+.cs-app::before{ content:""; position:absolute; left:-3px; top:17%; width:3px; height:19%; border-radius:2px 0 0 2px;
+  background:linear-gradient(#2a2a2c 0 22%, transparent 22% 34%, #2a2a2c 34% 64%, transparent 64% 70%, #2a2a2c 70% 100%); }
 .cs-app-screen{ aspect-ratio:375 / 812; overflow-y:auto; overscroll-behavior:contain;
-  border-radius:31px; background:var(--white); scrollbar-width:none; }
+  border-radius:13.4cqw; background:var(--white); scrollbar-width:none; }
 .cs-app-screen::-webkit-scrollbar{ display:none; }
 .cs-app-screen:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
 .proj-body .cs-app-screen img{ display:block; width:100%; height:auto; margin:0; border:0; border-radius:0; }
-.cs-app figcaption{ font-size:13px; color:var(--muted); margin-top:12px; text-align:center; }
+.cs-app figcaption{ font-size:13px; color:var(--muted); margin-top:14px; text-align:center; }
 .proj-body p.cs-app-hint{ font-size:13px; color:var(--muted); margin:0 0 8px; }
 .cs-app-diffs .cs-frow:last-child{ grid-column:1 / -1; }
 @media (max-width: 760px){
