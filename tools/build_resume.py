@@ -59,7 +59,7 @@ PAGE1_JOBS = [
          "Shaped the UX for Wyndham's booking and loyalty replatform across web and mobile with the design director, moving the business off legacy systems so it could ship features faster and add planned AI features",
          "Led design for the homepage, core flows, and most-used components across the web replatform, and mentored other designers on the team",
          "Designed and shipped tiered cash-plus-points rates that raised desktop points bookings 4% in an A/B test",
-         "Redesigned Rooms & Rates, the main booking decision screen. When A/B testing showed my first version was flat on desktop and down 5% on mobile against the live page, I changed approach, designing a smaller, usability-tested update and moving bigger changes into post-launch tests",
+         "Redesigned Rooms & Rates, the main booking decision screen, for web and the native app. When A/B testing showed my first version was flat on desktop and down 5% on mobile against the live page, I changed approach, designing a smaller, usability-tested update and moving bigger changes into post-launch tests",
          "Worked with product, research, brand leadership, and an outside engineering vendor to decide what shipped and in what order",
      ]),
     ("Joy", "Senior Product Designer", "Oct 2022 – Jul 2023",
