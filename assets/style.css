@@ -292,9 +292,6 @@ header.site-nav{
 .explore-more a{ color: var(--accent); }
 .explore-more a:hover{ text-decoration: underline; }
 
-/* In-progress card (no case study yet) */
-.work-card.is-wip{ cursor: default; }
-.work-card.is-wip:hover{ transform: none; box-shadow: none; }
 .wip-pill{
   display: inline-block;
   font-size: 11.5px;
@@ -307,6 +304,8 @@ header.site-nav{
   padding: 3px 10px;
   margin-bottom: 12px;
 }
+
+.case-hero .wip-pill{ margin: 0 0 14px; }
 
 /* Timebar thumbnail, drawn in CSS: one bar per day, lighter end = free time */
 .tb-thumb{
