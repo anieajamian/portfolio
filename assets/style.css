@@ -841,6 +841,10 @@ footer.site-footer{
 .screen-row .img-caption{
   margin: 0 0 6px;
 }
+.screen-row.cap-below .img-caption{
+  margin: 10px 0 0;
+  text-align: center;
+}
 .screen-solo{
   max-width: 338px;
   margin: 8px 0 28px;
