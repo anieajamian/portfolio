@@ -1399,6 +1399,9 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 /* ---- native app screens: scrollable phone frames (outline style) ---- */
 .cs-app-row{ display:grid; grid-template-columns:repeat(3, minmax(0, 260px)); gap:36px; padding:0 4px;
   justify-content:start; margin:30px 0 12px; }
+/* four phones: row breaks out of the 700px text column so each phone stays readable */
+.cs-app-row.cols-4{ grid-template-columns:repeat(4, minmax(0, 1fr)); gap:24px; padding:0; }
+@media (min-width: 1100px){ .cs-app-row.cols-4{ width:900px; } }
 .cs-app{ margin:0; min-width:0; }
 .cs-app{ position:relative; container-type:inline-size; }
 /* realistic device: thin black bezel, screen edge to edge, island + side buttons */
@@ -1422,5 +1425,6 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
   .cs-app-row{ display:flex; gap:20px; overflow-x:auto; scroll-snap-type:x mandatory;
     margin-right:-24px; padding-right:24px; padding-bottom:4px; }
   .cs-app{ flex:0 0 230px; scroll-snap-align:start; }
+  .cs-app-row.cols-4{ width:auto; }
   .cs-app-diffs .cs-frow:last-child{ grid-column:auto; }
 }
