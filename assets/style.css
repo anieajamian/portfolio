@@ -1419,7 +1419,7 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 .cs-app-screen:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
 .proj-body .cs-app-screen img{ display:block; width:100%; height:auto; margin:0; border:0; border-radius:0; }
 .cs-app figcaption{ font-size:13px; color:var(--muted); margin-top:14px; text-align:center; }
-.proj-body p.cs-app-hint{ font-size:13px; color:var(--muted); margin:0 0 8px; }
+.proj-body p.cs-app-hint{ font-size:13px; color:var(--muted); margin:22px 0 8px; }
 .cs-app-diffs .cs-frow:last-child{ grid-column:1 / -1; }
 @media (max-width: 760px){
   .cs-app-row{ display:flex; gap:20px; overflow-x:auto; scroll-snap-type:x mandatory;
