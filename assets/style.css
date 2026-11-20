@@ -1422,12 +1422,8 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 .proj-body p.cs-app-hint{ font-size:13px; color:var(--muted); margin:22px 0 8px; }
 .cs-app-diffs .cs-frow:last-child{ grid-column:1 / -1; }
 @media (max-width: 760px){
-  .cs-app-row{ display:flex; gap:20px; overflow-x:auto; scroll-snap-type:x mandatory;
-    margin-right:-24px; padding-right:24px; padding-bottom:4px; }
-  .cs-app{ flex:0 0 230px; scroll-snap-align:start; }
-  /* Medly: 2x2 grid on phones instead of a sideways scroll */
-  .cs-app-row.cols-4{ display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:28px 18px; width:auto;
-    overflow:visible; scroll-snap-type:none; margin-right:0; padding:0 3px; }
-  .cs-app-row.cols-4 .cs-app{ flex:none; }
+  /* phones: 2-column grid instead of a sideways scroll; an odd last phone sits left on its own row */
+  .cs-app-row, .cs-app-row.cols-4{ display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:28px 18px;
+    width:auto; padding:0 3px; }
   .cs-app-diffs .cs-frow:last-child{ grid-column:auto; }
 }
