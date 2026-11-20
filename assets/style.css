@@ -841,6 +841,8 @@ footer.site-footer{
 .screen-row .img-caption{
   margin: 0 0 10px;
 }
+/* rows of mobile screens: caption centered over each phone */
+.screen-row.cap-center .img-caption{ text-align: center; }
 .screen-solo{
   max-width: 338px;
   margin: 8px 0 28px;
@@ -1415,7 +1417,7 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 .cs-app-screen::-webkit-scrollbar{ display:none; }
 .cs-app-screen:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
 .proj-body .cs-app-screen img{ display:block; width:100%; height:auto; margin:0; border:0; border-radius:0; }
-.cs-app figcaption{ font-size:13px; color:var(--muted); margin:0 0 12px; }
+.cs-app figcaption{ font-size:13px; color:var(--muted); margin:0 0 12px; text-align:center; }
 .proj-body p.cs-app-hint{ width:fit-content; max-width:100%; font-size:13px; line-height:1.5; color:var(--muted);
   margin:20px 0 0; padding:9px 16px; background:var(--bg-alt); border-radius:var(--radius); }
 .cs-app-diffs .cs-frow:last-child{ grid-column:1 / -1; }
