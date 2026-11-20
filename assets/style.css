@@ -1425,6 +1425,9 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
   .cs-app-row{ display:flex; gap:20px; overflow-x:auto; scroll-snap-type:x mandatory;
     margin-right:-24px; padding-right:24px; padding-bottom:4px; }
   .cs-app{ flex:0 0 230px; scroll-snap-align:start; }
-  .cs-app-row.cols-4{ width:auto; }
+  /* Medly: 2x2 grid on phones instead of a sideways scroll */
+  .cs-app-row.cols-4{ display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:28px 18px; width:auto;
+    overflow:visible; scroll-snap-type:none; margin-right:0; padding:0 3px; }
+  .cs-app-row.cols-4 .cs-app{ flex:none; }
   .cs-app-diffs .cs-frow:last-child{ grid-column:auto; }
 }
