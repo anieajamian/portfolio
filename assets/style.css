@@ -1419,7 +1419,8 @@ body.home header.site-nav:has(.nav-open) .btn.nav-cta{
 .cs-app-screen:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
 .proj-body .cs-app-screen img{ display:block; width:100%; height:auto; margin:0; border:0; border-radius:0; }
 .cs-app figcaption{ font-size:13px; color:var(--muted); margin-top:14px; text-align:center; }
-.proj-body p.cs-app-hint{ font-size:13px; color:var(--muted); margin:22px 0 8px; }
+.proj-body p.cs-app-hint{ width:fit-content; max-width:100%; font-size:13px; line-height:1.5; color:var(--muted);
+  margin:30px 0 12px; padding:9px 16px; background:var(--bg-alt); border-radius:var(--radius); }
 .cs-app-diffs .cs-frow:last-child{ grid-column:1 / -1; }
 @media (max-width: 760px){
   /* phones: 2-column grid instead of a sideways scroll; an odd last phone sits left on its own row */
